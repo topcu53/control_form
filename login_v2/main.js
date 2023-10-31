@@ -5,8 +5,13 @@ var username = document.getElementById("username");
 
 
 myname.addEventListener("keyup", run); // tuştan elini kaldırdığında
+lastname.addEventListener("keyup", run);
 
+function birlesim() {
+
+    username.value = myname.value + "." + lastname.value;
+}
 function run(e) {
     e.preventDefault();
-    username.value = myname.value +"."+ lastname.value;
+    birlesim();
 }
