@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kurulum Formu</title>
+    <link rel="stylesheet" href="/Setup form/loginform/form/style.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="view">
+
+            <div class="table">
+                <div class="firstheader">
+                    <h2>BİLGİSAYAR KURULUM FORMU</h2>
+                </div>
+                <div class="col">
+                    <div class="roview">
+                        <div class="tcolunm">Kullanıcı Adı</div>
+                        <div class="tcolunm">Unvanı</div>
+                        <div class="tcolunm">Lokasyon</div>
+                        <div class="tcolunm">Tarih</div>
+                    </div>
+                    <div class="roview">
+                        <div class="tcolunm"><input type="text"></div>
+                        <div class="tcolunm"><input type="text"></div>
+                        <div class="tcolunm"><input type="text"></div>
+                        <div class="tcolunm"><input type="date" name="" id=""></div>
+                    </div>
+                </div>
+                
+                <div class="col">
+                    <div class="tcolunm">Gerekli Bilgisayar Kurulum ve Ayarları</div>
+                    <div class="tcolunm">Yapılan İşlem</div>
+                </div>
+                <div class="roview">
+                    <div class="tcolunm">İşletim sistemi hangi sürüm/versiyon kuruldu?</div>
+                    <div class="tcolunm"><input type="text"></div>
+                </div>
+                <div class="roview">
+                    <div class="tcolunm">Standart local admin kullanıcı adı ve parolası oluşturuldu mu?</div>
+                    <div class="tcolunm"><input type="radio" name="1">Yes</input><input type="radio" name="1">No</input>
+                    </div>
+                </div>
+                <div class="roview">
+                    <div class="tcolunm">Şirket talimatına uygun bilgisayar adı ne verildi?</div>
+                    <div class="tcolunm"><input type="radio" name="2">Yes</input><input type="radio" name="2">No</input>
+                    </div>
+                </div>
+                <div class="roview">
+                    <div class="tcolunm">İşletim sistemi lisansı aktif edildi mi?</div>
+                    <div class="tcolunm"><input type="radio" name="3">Yes</input><input type="radio" name="3">No</input>
+                    </div>
+                </div>
+                <div class="roview">
+                    <div class="tcolunm">Trend Micro OfficeScan antivirüs porgramı güncel versiyon kuruldu mu?</div>
+                    <div class="tcolunm"><input type="radio" name="4">Yes</input><input type="radio" name="4">No</input>
+                    </div>
+                </div>
+                <div class="roview">
+                    <div class="tcolunm">Driver kurulumları eksiksiz yapıldı mı?</div>
+                    <div class="tcolunm"><input type="radio" name="5">Yes</input><input type="radio" name="5">No</input>
+                    </div>
+                </div>
+                <div class="roview">
+                    <div class="tcolunm">Microsoft update yapılıp otomatik update kapatıldı mı?</div>
+                    <div class="tcolunm"><input type="radio" name="6">Yes</input><input type="radio" name="6">No</input>
+                    </div>
+                </div>
+                <div class="roview">
+                    <div class="tcolunm">Domain ayarları yapılıp oturum açıldı mı?</div>
+                    <div class="tcolunm"><input type="radio" name="7">Yes</input><input type="radio" name="7">No</input>
+                    </div>
+                </div>
+                <div class="roview">
+                    <div class="tcolunm">Microsoft Office hangi sürümü kuruldu?</div>
+                    <div><select name="office" id="office">
+                            <option value="Of2010x86">Office 2010 x86</option>
+                            <option value="Of2010x64">Office 2010 x64</option>
+                            <option value="Of2013x86">Office 2013 x86</option>
+                            <option value="Of2013x64">Office 2013 x64</option>
+                            <option value="Of2016x86">Office 2016 x86</option>
+                            <option value="Of2016x64">Office 2016 x64</option>
+                            <option value="Of365x86">Office 365 x86</option>
+                            <option value="Of365x64">Office 365 x64</option>
+                        </select></div>
+                </div>
+                <div class="roview">
+                    <div class="tcolunm">Microsoft Office lisansı aktif edildi mi?</div>
+                    <div class="tcolunm"><input type="radio" name="6">Yes</input><input type="radio" name="6">No</input>
+                    </div>
+                </div>
+                <div class="roview">
+                    <div class="tcolunm">Mail hesabı kurulup veri dosyası ve e-posta imza ayarları yapıldı mı?</div>
+                    <div class="tcolunm"><input type="radio" name="6">Yes</input><input type="radio" name="6">No</input>
+                    </div>
+                </div>
+                <div class="roview">
+                    <div class="tcolunm">Var ise kullanıcı yedekleri eksiksiz aktarıldı mı?</div>
+                    <div class="tcolunm"><input type="radio" name="6">Yes</input><input type="radio" name="6">No</input>
+                    </div>
+                </div>
+                <div class="roview">
+                    <div class="tcolunm">Uzak bağlantı ayarları ve güvenlik duvarı ayarları yapıldı mı?</div>
+                    <div class="tcolunm"><input type="radio" name="6">Yes</input><input type="radio" name="6">No</input>
+                    </div>
+                </div>
+                <div class="roview">
+                    <div class="tcolunm">ThightVNC programı kuruldu mu?</div>
+                    <div class="tcolunm"><input type="radio" name="6">Yes</input><input type="radio" name="6">No</input>
+                    </div>
+                </div>
+                <div class="roview">
+                    <div class="tcolunm">SAP programı kurulumu yapıldı mı?</div>
+                    <div class="tcolunm"><input type="radio" name="6">Yes</input><input type="radio" name="6">No</input>
+                    </div>
+                </div>
+
+                <div class="roview">
+                    <div class="tcolunm">SAP programı kullanıcı giriş ayarları yapıldı mı? (Service-SapLogon)</div>
+                    <div class="tcolunm"><input type="radio" name="6">Yes</input><input type="radio" name="6">No</input>
+                    </div>
+                </div>
+                <div class="roview">
+                    <div class="tcolunm">Analysis programı kurulup çalıştığı test edildi mi?</div>
+                    <div class="tcolunm"><input type="radio" name="6">Yes</input><input type="radio" name="6">No</input>
+                    </div>
+                </div>
+                <div class="roview">
+                    <div class="tcolunm">Mikro ERP programı kurulup database ayarları yapıldı mı?</div>
+                    <div class="tcolunm"><input type="radio" name="6">Yes</input><input type="radio" name="6">No</input>
+                    </div>
+                </div>
+                <div class="roview">
+                    <div class="tcolunm">Analyzer programı kurulup çalıştığı test edildi mi?</div>
+                    <div class="tcolunm"><input type="radio" name="6">Yes</input><input type="radio" name="6">No</input>
+                    </div>
+                </div>
+                <div class="roview">
+                    <div class="tcolunm">EPM programı kurulup çalıştığı test edildi mi?</div>
+                    <div class="tcolunm"><input type="radio" name="6">Yes</input><input type="radio" name="6">No</input>
+                    </div>
+                </div>
+                <div class="roview">
+                    <div class="tcolunm">Bilgisayar ürün teslim envanterine eksiksiz kayıt edildi mi?</div>
+                    <div class="tcolunm"><input type="radio" name="6">Yes</input><input type="radio" name="6">No</input>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
