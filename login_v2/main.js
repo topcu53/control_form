@@ -9,7 +9,7 @@ lastname.addEventListener("keyup", run);
 
 function birlesim() {
 
-    username.value = myname.value + "." + lastname.value;
+    username.value = myname.value.toLowerCase() + "." + lastname.value.toLowerCase();
 }
 function run(e) {
     e.preventDefault();
