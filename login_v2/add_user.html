@@ -3,26 +3,39 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <title>Document</title>
+  <title>Kayıt Formu</title>
+  <link rel="stylesheet" href="/login_v2/stylelogin.css" />
+  <link
+    href="https://fonts.googleapis.com/css?family=Montserrat"
+    rel="stylesheet"
+    type="text/css"
+  />
+  <link
+    href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+    rel="stylesheet"
+  />
   </head>
   <body>
-    <div class="inputBox">
-      <input id="name" type="text" placeholder="Ad" required />
-      <i class="user_name"></i>
+    <div class="container">
+      <div class="inputBox">
+        <input id="name" type="text" placeholder="Ad" required />
+        <i class="user_name"></i>
+      </div>
+      <div class="inputBox">
+        <input id="lastname" type="text" placeholder="Soyad" required />
+        <i class="user_lastname"></i>
+      </div>
+      <div class="inputBox">
+        <input id="username" type="text" placeholder="Kullanıcı Adı" disabled />
+        <i class="user_lastname"></i>
+      </div>
+      <div class="inputBox">
+        <input id="pass" type="password" placeholder="Parola" required />
+        <i class="user_password"></i>
+      </div class="Button">
+      <button type="button">Kayıt Ol</button>
     </div>
-    <div class="İnputBox">
-      <input id="lastname" type="text" placeholder="Soyad" required />
-      <i class="user_lastname"></i>
-    </div>
-    <div class="İnputBox">
-      <input id="username" type="text" placeholder="Kullanıcı Adı" disabled />
-      <i class="user_lastname"></i>
-    </div>
-    <div class="İnputBox">
-      <input id="password" type="text" placeholder="Parola" required />
-      <i class="user_password"></i>
-    </div>
+   
     <script src="/login_v2/main.js"></script>
   </body>
 </html>
