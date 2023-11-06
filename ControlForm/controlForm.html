@@ -1,45 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form</title>
-    <link rel="stylesheet" href="/ControlForm/controlStyle.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/ControlForm/controlStyle.css">
 </head>
 <body>
-    <form>
-        <input id="input-1" type="text" placeholder="John Doe" required autofocus />
-        <label for="input-1">
-          <span class="label-text">Full Name</span>
-          <span class="nav-dot"></span>
-          <div class="signup-button-trigger">Sign Up</div>
-        </label>
-        <input id="input-2" type="text" placeholder="john" required />
-        <label for="input-2">
-          <span class="label-text">Username</span>
-          <span class="nav-dot"></span>
-        </label>
-        <input id="input-3" type="email" placeholder="email@address.com" required />
-        <label for="input-3">
-          <span class="label-text">Email</span>
-          <span class="nav-dot"></span>
-        </label>
-        <input id="input-4" type="text" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;" required />
-        <label for="input-4">
-          <span class="label-text">Password</span>
-          <span class="nav-dot"></span>
-        </label>
-        <input id="input-5" type="text" placeholder="&#9679;&#9679;&#9679;&#9679;&#9679;&#9679;" required />
-        <label for="input-5">
-          <span class="label-text">Confirm Password</span>
-          <span class="nav-dot"></span>
-        </label>
-        <button type="submit">Create Your Account</button>
-        <p class="tip">Press Tab</p>
-        <div class="signup-button">Sign Up</div>
-      </form>
-      
+  <h1>Smart Registration Form</h1>
+  <div class="details">Material Design Theme</div>
+  <div class="details">Responsive Design</div>
+  <form method="POST" action="">
+      <div class="col">
+          <div class="minput">
+              <input type="text" id="fname" dir="auto" required>
+              <span class="bar"></span>
+              <label>First Name</label>
+          </div>
+          <div class="minput">
+              <input type="text" id="lname" dir="auto" required>
+              <span class="bar"></span>
+              <label>Last Name</label>
+          </div>
+          <div class="minput">
+              <input type="number" id="age" dir="auto" required>
+              <span class="bar"></span>
+              <label>Age</label>
+          </div>
+          <div class="control-group">
+              <span class="sex">Sex :</span>
+              <label class="control control--radio">Male
+                  <input type="radio" name="radio" id="male" />
+                  <div class="control__indicator"></div>
+              </label>
+              <label class="control control--radio">Female
+                  <input type="radio" name="radio" id="femelle" />
+                  <div class="control__indicator"></div>
+              </label>
+          </div>
+          <div class="minput">
+              <div class="select">
+                  <select id="pays">
+                      <option value="">-- Country --</option>
+                      <option value="morocco">Morocco</option>
+                      <option value="algeria">Algeria</option>
+                      <option value="tunisia">Tunisia</option>
+                  </select>
+                  <div class="select__arrow"></div>
+              </div>
+          </div>
+      </div>
+      <div class="col">
+          <div class="minput">
+              <input type="text" id="pseudo" dir="auto" required>
 
-      <script src="/ControlForm/control.js"></script>
+              <span class="bar"></span>
+              <label>Username</label>
+          </div>
+
+          <div class="minput">
+              <input type="email" id="email" dir="ltr" class="" required>
+              <span class="bar"></span>
+              <label>Email</label>
+          </div>
+
+          <div class="minput">
+              <input type="password" id="password" dir="auto" required>
+              <span class="bar"></span>
+              <label>Passwrod</label>
+          </div>
+
+          <div class="minput">
+              <input type="password" id="passwordConf" required>
+              <span class="bar"></span>
+              <label>Retype Password</label>
+          </div>
+          <div class="control-group">
+
+              <label class="control control--checkbox">Join Our Newsletter & Marketing Communication.
+                  <input type="checkbox" checked/>
+                  <div class="control__indicator"></div>
+              </label>
+          </div>
+
+          <div class="minput">
+            <span id="valid" style="margin-bottom: 5px;">Valid fields : 1/10</span>
+              
+              <input type="submit" id="send" value="Submit" disabled="true" style="padding:5px;padding-top:7px;">
+          </div>
+      </div>
+  </form>
+  <script src="/ControlForm/control.js"></script>
 </body>
 </html>
