@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="control">
+        <div class="ctrllabel">Select a Customer Name</div>
+        <input type="text" id="dropdown1" />
+    </div>
+    <script type="text/javascript">
+	
+    $(function() {
+        var items = [{
+            text: "Adams",
+            value: "emp1"
+        }, {
+            text: "James",
+            value: "emp2"
+        }, {
+            text: "Maria",
+            value: "emp3"
+        }, {
+            text: "Jessica",
+            value: "emp4"
+        }, {
+            text: "Jenneth",
+            value: "emp5"
+        }];
+        $('#dropdown1').ejDropDownList({
+            dataSource: items,
+            fields: {
+                text: "text",
+                value: "value"
+            },
+            enableFilterSearch: true,
+            filterType: "startsWith"
+        });
+    });
+
+    </script>
+</body>
+</html>

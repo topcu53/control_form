@@ -261,12 +261,12 @@ label.control--radio {
     position: relative;
     display: inline-block;
     margin-bottom: 0;
-    width: 160px;
+    width: 100%;
 }
 
 .select select {
     display: inline-block;
-    width: 160px;
+    width: 100%;
     cursor: pointer;
     padding: 10px;
     outline: 0;

@@ -1,106 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="/ControlForm/controlStyle.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/ControlForm/controlStyle.css">
+
+    <script src='jquery-3.2.1.min.js' type='text/javascript'></script>
+        <script src='select2/dist/js/select2.min.js' type='text/javascript'></script>
+
+        <link href='select2/dist/css/select2.min.css' rel='stylesheet' type='text/css'>
 </head>
+
 <body>
-  <h1>Smart Registration Form</h1>
-  <div class="details">Material Design Theme</div>
-  <div class="details">Responsive Design</div>
-  <form method="POST" action="">
-      <div class="col">
-        <div class="minput">
-            <div class="select">
-                <select id="pays">
-                    <option value="">İşletim sistemi hangi sürüm/versiyon kuruldu?</option>
-                    <option value="morocco">Morocco</option>
-                    <option value="algeria">Algeria</option>
-                    <option value="tunisia">Tunisia</option>
-                </select>
-                <div class="select__arrow"></div>
+
+
+   
+
+ <!-- Script -->
+ <script>
+    $(document).ready(function(){
+        
+        // Initialize select2
+        $("#selUser").select2();
+
+        // Read selected option
+        $('#but_read').click(function(){
+            var username = $('#selUser option:selected').text();
+            var userid = $('#selUser').val();
+       
+            $('#result').html("id : " + userid + ", name : " + username);
+        });
+    });
+    </script>
+    <h1>Smart Registration Form</h1>
+    <div class="details">Material Design Theme</div>
+    <div class="details">Responsive Design</div>
+    <form method="POST" action="">
+        <div class="col">
+            <div class="minput">
+                <select id='selUser' style='width: 200px;'>
+                    <option value='0'>-- Select User --</option>          
+                    <option value='1'>Yogesh singh</option>  
+                    <option value='2'>Sonarika Bhadoria</option>   
+                    <option value='3'>Anil Singh</option>        
+                    <option value='4'>Vishal Sahu</option>        
+                    <option value='5'>Mayank Patidar</option>        
+                    <option value='6'>Vijay Mourya</option>        
+                    <option value='7'>Rakesh sahu</option> 
+                </select>   
+                <div class="select">
+
+                    <select id="selUser">
+                        <option value="">İşletim sistemi hangi sürüm/versiyon kuruldu?</option>
+                        <option value="morocco">Windows 98 (1998)</option>
+                        <option value="algeria">Windows Me (2000)</option>
+                        <option value="tunisia">Windows XP x32</option>
+                        <option value="tunisia">Windows 7 Pro x32</option>
+                        <option value="tunisia">Windows 7 Pro x64</option>
+                        <option value="tunisia">Windows 8 Pro</option>
+                        <option value="tunisia">Windows 8.1 Pro</option>
+                        <option value="tunisia">Windows 10 Pro x64 21H2</option>
+                        <option value="tunisia">Windows 10 Pro x64 22H2</option>
+                        <option value="tunisia">Windows 11 Pro x64 21H2</option>
+                        <option value="tunisia">Windows 11 Pro x64 22H2</option>
+                        <option value="tunisia">Windows 11 Pro x64 23H2</option>
+                        <option value="tunisia">Ubuntu</option>
+                        <option value="tunisia">Linux Mint</option>
+                        <option value="tunisia">Pardus</option>
+
+
+
+                        <option value="tunisia">macOS Sonoma</option>
+                        <option value="tunisia">macOS Ventura</option>
+                        <option value="tunisia">macOS Monterey</option>
+                        <option value="tunisia">macOS Big Sur</option>
+                        <option value="tunisia">macOS Catalina</option>
+                        <option value="tunisia">macOS Mojave</option>
+                        <option value="tunisia">macOS High Sierra</option>
+                        <option value="tunisia">macOS Sierra</option>
+                        <option value="tunisia">OS X El Capitan</option>
+                        <option value="tunisia">OS X Yosemite</option>
+                        <option value="tunisia">macOS High Sierra</option>
+                        <option value="tunisia">macOS Sierra</option>
+                        <option value="tunisia">OS X El Capitan</option>
+                        <option value="tunisia">OS X Yosemite</option>
+                        <option value="tunisia">OS X Mavericks</option>
+                        <option value="tunisia">OS X Mountain Lion</option>
+                        <option value="tunisia">OS X Lion</option>
+                        <option value="tunisia">Mac OS X Snow Leopard</option>
+                        <option value="tunisia">Mac OS X Leopard</option>
+                        <option value="tunisia">Mac OS X Tiger</option>
+                        <option value="tunisia">Mac OS X Panther</option>
+                        <option value="tunisia">Mac OS X Jaguar</option>
+                        <option value="tunisia">Mac OS X Puma</option>
+                        <option value="tunisia">Mac OS X Cheetah</option>
+                    </select>
+                    <div class="select__arrow"></div>
+                </div>
+            </div>
+            <div class="minput">
+                <input type="text" id="lname" dir="auto" required>
+                <span class="bar"></span>
+                <label>Last Name</label>
+            </div>
+            <div class="minput">
+                <input type="number" id="age" dir="auto" required>
+                <span class="bar"></span>
+                <label>Age</label>
+            </div>
+            <div class="control-group">
+                <span class="sex">Sex :</span>
+                <label class="control control--radio">Male
+                    <input type="radio" name="radio" id="male" />
+                    <div class="control__indicator"></div>
+                </label>
+                <label class="control control--radio">Female
+                    <input type="radio" name="radio" id="femelle" />
+                    <div class="control__indicator"></div>
+                </label>
+            </div>
+            <div class="minput">
+                <div class="select">
+                    <select id="pays">
+                        <option value="">-- Country --</option>
+                        <option value="morocco">Morocco</option>
+                        <option value="algeria">Algeria</option>
+                        <option value="tunisia">Tunisia</option>
+                    </select>
+                    <div class="select__arrow"></div>
+                </div>
             </div>
         </div>
-          <div class="minput">
-              <input type="text" id="fname" dir="auto" required>
-              <span class="bar"></span>
-              <label>İşletim sistemi hangi sürüm/versiyon kuruldu?</label>
-          </div>
-          <div class="minput">
-              <input type="text" id="lname" dir="auto" required>
-              <span class="bar"></span>
-              <label>Last Name</label>
-          </div>
-          <div class="minput">
-              <input type="number" id="age" dir="auto" required>
-              <span class="bar"></span>
-              <label>Age</label>
-          </div>
-          <div class="control-group">
-              <span class="sex">Sex :</span>
-              <label class="control control--radio">Male
-                  <input type="radio" name="radio" id="male" />
-                  <div class="control__indicator"></div>
-              </label>
-              <label class="control control--radio">Female
-                  <input type="radio" name="radio" id="femelle" />
-                  <div class="control__indicator"></div>
-              </label>
-          </div>
-          <div class="minput">
-              <div class="select">
-                  <select id="pays">
-                      <option value="">-- Country --</option>
-                      <option value="morocco">Morocco</option>
-                      <option value="algeria">Algeria</option>
-                      <option value="tunisia">Tunisia</option>
-                  </select>
-                  <div class="select__arrow"></div>
-              </div>
-          </div>
-      </div>
-      <div class="col">
-          <div class="minput">
-              <input type="text" id="pseudo" dir="auto" required>
+        <div class="col">
+            <div class="minput">
+                <input type="text" id="pseudo" dir="auto" required>
 
-              <span class="bar"></span>
-              <label>Username</label>
-          </div>
+                <span class="bar"></span>
+                <label>Username</label>
+            </div>
 
-          <div class="minput">
-              <input type="email" id="email" dir="ltr" class="" required>
-              <span class="bar"></span>
-              <label>Email</label>
-          </div>
+            <div class="minput">
+                <input type="email" id="email" dir="ltr" class="" required>
+                <span class="bar"></span>
+                <label>Email</label>
+            </div>
 
-          <div class="minput">
-              <input type="password" id="password" dir="auto" required>
-              <span class="bar"></span>
-              <label>Passwrod</label>
-          </div>
+            <div class="minput">
+                <input type="password" id="password" dir="auto" required>
+                <span class="bar"></span>
+                <label>Passwrod</label>
+            </div>
 
-          <div class="minput">
-              <input type="password" id="passwordConf" required>
-              <span class="bar"></span>
-              <label>Retype Password</label>
-          </div>
-          <div class="control-group">
+            <div class="minput">
+                <input type="password" id="passwordConf" required>
+                <span class="bar"></span>
+                <label>Retype Password</label>
+            </div>
+            <div class="control-group">
 
-              <label class="control control--checkbox">Join Our Newsletter & Marketing Communication.
-                  <input type="checkbox" checked/>
-                  <div class="control__indicator"></div>
-              </label>
-          </div>
+                <label class="control control--checkbox">Join Our Newsletter & Marketing Communication.
+                    <input type="checkbox" checked />
+                    <div class="control__indicator"></div>
+                </label>
+            </div>
 
-          <div class="minput">
-            <span id="valid" style="margin-bottom: 5px;">Valid fields : 1/10</span>
-              
-              <input type="submit" id="send" value="Submit" disabled="true" style="padding:5px;padding-top:7px;">
-          </div>
-      </div>
-  </form>
-  <script src="/ControlForm/control.js"></script>
+            <div class="minput">
+                <span id="valid" style="margin-bottom: 5px;">Valid fields : 1/10</span>
+
+                <input type="submit" id="send" value="Submit" disabled="true" style="padding:5px;padding-top:7px;">
+            </div>
+        </div>
+    </form>
+    <script src="/ControlForm/control.js"></script>
+    <!-- Script -->
+ <script>
+    $(document).ready(function(){
+        
+        // Initialize select2
+        $("#selUser").select2();
+
+        // Read selected option
+        $('#but_read').click(function(){
+            var username = $('#selUser option:selected').text();
+            var userid = $('#selUser').val();
+       
+            $('#result').html("id : " + userid + ", name : " + username);
+        });
+    });
+    </script>
 </body>
+
 </html>
