@@ -1,12 +1,17 @@
-*,*:after,*:before{
-box-sizing: border-box;
+@import url('https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
 }
+
 html,
 body {
     margin: 0 auto;
     min-height: 100%;
     font-family: 'Yanone Kaffeesatz', Consolas;
 }
+
 h1 {
     text-align: center;
     margin: 40px auto;
@@ -306,4 +311,3 @@ label.control--radio {
 .select select:disabled ~ .select__arrow {
     border-top-color: #ccc;
 }
-

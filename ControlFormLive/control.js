@@ -10,20 +10,6 @@ var fname = document.getElementById('fname'),
     send = document.getElementById('send'),
     tabBooleans = [false, false, false, false, false, false, false, false, false];
 
-    
-    $(document).ready(function(){
-        $('.search_select_box select').selectpicker();
-    })
-
-    window.onload = function () {
-        var script = document.createElement("script");
-        script.type = "text/javascript";
-        script.src = "http://jsonip.appspot.com/?callback=DisplayIP";
-        document.getElementsByTagName("head")[0].appendChild(script);
-    };
-    function DisplayIP(response) {
-        document.getElementById("ipaddress").innerHTML = "Your IP Address is " + response.ip;
-    }
 function up(label, str) {
     var s = document.getElementById(str);
     s.style.borderColor = "#66CC99";
@@ -159,3 +145,5 @@ send.addEventListener('click', function(e) {
     e.preventDefault();
     alert("Bravo!! Vous avez bien rempli la formulaire !");
 })
+
+$(".chosen").chosen();

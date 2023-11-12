@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="control.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chosen-js@1.8.7/chosen.jquery.min.js"></script>
+</head>
+    <body>
+        <h1>Smart Registration Form</h1>
+        <div class="details">Material Design Theme</div>
+        <div class="details">Responsive Design</div>
+        <form method="POST" action="">
+            <div class="col">
+                <div class="minput">
+                    <input type="text" id="fname" dir="auto" required>
+                    <span class="bar"></span>
+                    <label>First Name</label>
+                </div>
+                <div class="minput">
+                    <input type="text" id="lname" dir="auto" required>
+                    <span class="bar"></span>
+                    <label>Last Name</label>
+                </div>
+                <div class="minput">
+                    <input type="number" id="age" dir="auto" required>
+                    <span class="bar"></span>
+                    <label>Age</label>
+                </div>
+                <div class="control-group">
+                    <span class="sex">Sex :</span>
+                    <label class="control control--radio">Male
+                        <input type="radio" name="radio" id="male" />
+                        <div class="control__indicator"></div>
+                    </label>
+                    <label class="control control--radio">Female
+                        <input type="radio" name="radio" id="femelle" />
+                        <div class="control__indicator"></div>
+                    </label>
+                </div>
+                <div class="minput">
+                    <div class="select">
+                        <select id="pays" class="chosen">
+                            <option value="">-- Country --</option>
+                            <option value="morocco">Morocco</option>
+                            <option value="algeria">Algeria</option>
+                            <option value="tunisia">Tunisia</option>
+                        </select>
+                        <div class="select__arrow"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="minput">
+                    <input type="text" id="pseudo" dir="auto" required>
+    
+                    <span class="bar"></span>
+                    <label>Username</label>
+                </div>
+    
+                <div class="minput">
+                    <input type="email" id="email" dir="ltr" class="" required>
+                    <span class="bar"></span>
+                    <label>Email</label>
+                </div>
+    
+                <div class="minput">
+                    <input type="password" id="password" dir="auto" required>
+                    <span class="bar"></span>
+                    <label>Passwrod</label>
+                </div>
+    
+                <div class="minput">
+                    <input type="password" id="passwordConf" required>
+                    <span class="bar"></span>
+                    <label>Retype Password</label>
+                </div>
+                <div class="control-group">
+    
+                    <label class="control control--checkbox">Join Our Newsletter & Marketing Communication.
+                        <input type="checkbox" checked/>
+                        <div class="control__indicator"></div>
+                    </label>
+                </div>
+    
+                <div class="minput">
+                  <span id="valid" style="margin-bottom: 5px;">Valid fields : 1/10</span>
+                    
+                    <input type="submit" id="send" value="Submit" disabled="true" style="padding:5px;padding-top:7px;">
+                </div>
+            </div>
+        </form>
+    <script src="control.js"></script>
+</body>
+</html>
