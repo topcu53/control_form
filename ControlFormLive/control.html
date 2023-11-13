@@ -1,99 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="control.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/themes/smoothness/jquery-ui.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chosen-js@1.8.7/chosen.jquery.min.js"></script>
+
+    <script src="js/jquery.min.js"></script>
+    <link rel="stylesheet" href="js/select2.min.css" />
+    <script src="js/select2.min.js"></script>
 </head>
-    <body>
-        <h1>Smart Registration Form</h1>
-        <div class="details">Material Design Theme</div>
-        <div class="details">Responsive Design</div>
-        <form method="POST" action="">
-            <div class="col">
+
+<body>
+    <h1>Smart Registration Form</h1>
+    <div class="details">Material Design Theme</div>
+    <div class="details">Responsive Design</div>
+    <form method="POST" action="">
+        <div class="col">
+            <div class="minput">
+                <span class="hSpan">İşletim sistemi hangi sürüm/versiyon kuruldu?</span>
+                <select id="sports" class="minputSelect">
+                    <option value="" selected hidden disabled>--İşletim Sistemi Seçiniz--</option>
+                    <option value="morocco">Windows 98 (1998)</option>
+                    <option value="algeria">Windows Me (2000)</option>
+                    <option value="tunisia">Windows XP x32</option>
+                    <option value="tunisia">Windows 7 Pro x32</option>
+                    <option value="tunisia">Windows 7 Pro x64</option>
+                    <option value="tunisia">Windows 8 Pro</option>
+                    <option value="tunisia">Windows 8.1 Pro</option>
+                    <option value="tunisia">Windows 10 Pro x64 21H2</option>
+                    <option value="tunisia">Windows 10 Pro x64 22H2</option>
+                    <option value="tunisia">Windows 11 Pro x64 21H2</option>
+                    <option value="tunisia">Windows 11 Pro x64 22H2</option>
+                    <option value="tunisia">Windows 11 Pro x64 23H2</option>
+                    <option value="tunisia">Ubuntu</option>
+                    <option value="tunisia">Linux Mint</option>
+                    <option value="tunisia">Pardus</option>
+                    <option value="tunisia">macOS Sonoma</option>
+                    <option value="tunisia">macOS Ventura</option>
+                    <option value="tunisia">macOS Monterey</option>
+                    <option value="tunisia">macOS Big Sur</option>
+                    <option value="tunisia">macOS Catalina</option>
+                    <option value="tunisia">macOS Mojave</option>
+                    <option value="tunisia">macOS High Sierra</option>
+                    <option value="tunisia">macOS Sierra</option>
+                    <option value="tunisia">OS X El Capitan</option>
+                    <option value="tunisia">OS X Yosemite</option>
+                    <option value="tunisia">macOS High Sierra</option>
+                    <option value="tunisia">macOS Sierra</option>
+                    <option value="tunisia">OS X El Capitan</option>
+                    <option value="tunisia">OS X Yosemite</option>
+                    <option value="tunisia">OS X Mavericks</option>
+                    <option value="tunisia">OS X Mountain Lion</option>
+                    <option value="tunisia">OS X Lion</option>
+                    <option value="tunisia">Mac OS X Snow Leopard</option>
+                    <option value="tunisia">Mac OS X Leopard</option>
+                    <option value="tunisia">Mac OS X Tiger</option>
+                    <option value="tunisia">Mac OS X Panther</option>
+                    <option value="tunisia">Mac OS X Jaguar</option>
+                    <option value="tunisia">Mac OS X Puma</option>
+                    <option value="tunisia">Mac OS X Cheetah</option>
+                </select>
+                <span class="bar"></span>
+            </div>
+            <div class="control-group">
+                <span class="sex">Standart local admin kullanıcı adı ve parolası oluşturuldu mu?</span>
+                <label class="control control--radio">Evet
+                    <input type="radio" name="radio" id="male" />
+                    <div class="control__indicator"></div>
+                </label>
+                <label class="control control--radio">Hayır
+                    <input type="radio" name="radio" id="femelle" />
+                    <div class="control__indicator"></div>
+                </label>
+            </div>
+            <div class="control-group">
+                <span class="sex">Şirket talimatına uygun bilgisayar adı ne verildi?</span>
+                <label class="control control--radio">Evet
+                    <input type="radio" name="radio" id="male" />
+                    <div class="control__indicator"></div>
+                </label>
+                <label class="control control--radio">Hayır
+                    <input type="radio" name="radio" id="femelle" />
+                    <div class="control__indicator"></div>
+                </label>
                 <div class="minput">
                     <input type="text" id="fname" dir="auto" required>
                     <span class="bar"></span>
-                    <label>First Name</label>
-                </div>
-                <div class="minput">
-                    <input type="text" id="lname" dir="auto" required>
-                    <span class="bar"></span>
-                    <label>Last Name</label>
-                </div>
-                <div class="minput">
-                    <input type="number" id="age" dir="auto" required>
-                    <span class="bar"></span>
-                    <label>Age</label>
-                </div>
-                <div class="control-group">
-                    <span class="sex">Sex :</span>
-                    <label class="control control--radio">Male
-                        <input type="radio" name="radio" id="male" />
-                        <div class="control__indicator"></div>
-                    </label>
-                    <label class="control control--radio">Female
-                        <input type="radio" name="radio" id="femelle" />
-                        <div class="control__indicator"></div>
-                    </label>
-                </div>
-                <div class="minput">
-                    <div class="select">
-                        <select id="pays" class="chosen">
-                            <option value="">-- Country --</option>
-                            <option value="morocco">Morocco</option>
-                            <option value="algeria">Algeria</option>
-                            <option value="tunisia">Tunisia</option>
-                        </select>
-                        <div class="select__arrow"></div>
-                    </div>
+                    <label>Verilen bilgisayar adını giriniz</label>
                 </div>
             </div>
-            <div class="col">
-                <div class="minput">
-                    <input type="text" id="pseudo" dir="auto" required>
-    
-                    <span class="bar"></span>
-                    <label>Username</label>
-                </div>
-    
-                <div class="minput">
-                    <input type="email" id="email" dir="ltr" class="" required>
-                    <span class="bar"></span>
-                    <label>Email</label>
-                </div>
-    
-                <div class="minput">
-                    <input type="password" id="password" dir="auto" required>
-                    <span class="bar"></span>
-                    <label>Passwrod</label>
-                </div>
-    
-                <div class="minput">
-                    <input type="password" id="passwordConf" required>
-                    <span class="bar"></span>
-                    <label>Retype Password</label>
-                </div>
-                <div class="control-group">
-    
-                    <label class="control control--checkbox">Join Our Newsletter & Marketing Communication.
-                        <input type="checkbox" checked/>
-                        <div class="control__indicator"></div>
-                    </label>
-                </div>
-    
-                <div class="minput">
-                  <span id="valid" style="margin-bottom: 5px;">Valid fields : 1/10</span>
-                    
-                    <input type="submit" id="send" value="Submit" disabled="true" style="padding:5px;padding-top:7px;">
+            <div class="minput">
+                <input type="text" id="fname" dir="auto" required>
+                <span class="bar"></span>
+                <label>First Name</label>
+            </div>
+            <div class="minput">
+                <input type="text" id="lname" dir="auto" required>
+                <span class="bar"></span>
+                <label>Last Name</label>
+            </div>
+            <div class="minput">
+                <input type="number" id="age" dir="auto" required>
+                <span class="bar"></span>
+                <label>Age</label>
+            </div>
+            <div class="control-group">
+                <span class="sex">Sex :</span>
+                <label class="control control--radio">Male
+                    <input type="radio" name="radio" id="male" />
+                    <div class="control__indicator"></div>
+                </label>
+                <label class="control control--radio">Female
+                    <input type="radio" name="radio" id="femelle" />
+                    <div class="control__indicator"></div>
+                </label>
+            </div>
+            <div class="minput">
+                <div class="select">
+                    <select id="pays" class="chosen">
+                        <option value="">-- Country --</option>
+                        <option value="morocco">Morocco</option>
+                        <option value="algeria">Algeria</option>
+                        <option value="tunisia">Tunisia</option>
+                    </select>
+                    <div class="select__arrow"></div>
                 </div>
             </div>
-        </form>
+        </div>
+        <div class="col">
+            <div class="minput">
+                <input type="text" id="pseudo" dir="auto" required>
+
+                <span class="bar"></span>
+                <label>Username</label>
+            </div>
+
+            <div class="minput">
+                <input type="email" id="email" dir="ltr" class="" required>
+                <span class="bar"></span>
+                <label>Email</label>
+            </div>
+
+            <div class="minput">
+                <input type="password" id="password" dir="auto" required>
+                <span class="bar"></span>
+                <label>Passwrod</label>
+            </div>
+
+            <div class="minput">
+                <input type="password" id="passwordConf" required>
+                <span class="bar"></span>
+                <label>Retype Password</label>
+            </div>
+            <div class="control-group">
+
+                <label class="control control--checkbox">Join Our Newsletter & Marketing Communication.
+                    <input type="checkbox" checked />
+                    <div class="control__indicator"></div>
+                </label>
+            </div>
+
+            <div class="minput">
+                <span id="valid" style="margin-bottom: 5px;">Valid fields : 1/10</span>
+
+                <input type="submit" id="send" value="Submit" disabled="true" style="padding:5px;padding-top:7px;">
+            </div>
+        </div>
+    </form>
     <script src="control.js"></script>
 </body>
+
 </html>

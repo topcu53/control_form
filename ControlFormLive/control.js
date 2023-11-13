@@ -145,5 +145,6 @@ send.addEventListener('click', function(e) {
     e.preventDefault();
     alert("Bravo!! Vous avez bien rempli la formulaire !");
 })
-
-$(".chosen").chosen();
+$(document).ready(function () {
+    $("#sports").select2();
+})
