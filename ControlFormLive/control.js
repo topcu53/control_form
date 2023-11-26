@@ -97,54 +97,57 @@ function verifiedForm() {
         inscrire.setAttribute("disabled", true);
     }
     document.getElementById("valid").innerHTML="Valid fields : "+valid+"/10";
-}
-/* Loading EventListener */
-fname.addEventListener('input', function() {
-    checkTxt('fname', 0, 2); //label 0 minimum de lettre 2
-    verifiedForm();
-});
+ }
+// /* Loading EventListener */
+// fname.addEventListener('input', function() {
+//     checkTxt('fname', 0, 2); //label 0 minimum de lettre 2
+//     verifiedForm();
+// });
 
-lname.addEventListener('input', function() {
-    checkTxt('lname', 1, 2); //label 1 minimum de lettre 2
-    verifiedForm();
-});
+// lname.addEventListener('input', function() {
+//     checkTxt('lname', 1, 2); //label 1 minimum de lettre 2
+//     verifiedForm();
+// });
 
-age.addEventListener('input', function() {
-    checkAge('age', 2); //label 2 condition: 5<=age<=140
-    verifiedForm();
-});
+// age.addEventListener('input', function() {
+//     checkAge('age', 2); //label 2 condition: 5<=age<=140
+//     verifiedForm();
+// });
 
-sexe.addEventListener('click', function() {
-    checkSexe('male', 'femelle'); //label 3 
-    verifiedForm();
-});
+// sexe.addEventListener('click', function() {
+//     checkSexe('male', 'femelle'); //label 3 
+//     verifiedForm();
+// });
 
-pays.addEventListener('change', function() {
-    checkPays("pays");
-    verifiedForm();
-});
+// pays.addEventListener('change', function() {
+//     checkPays("pays");
+//     verifiedForm();
+// });
 
-pseudo.addEventListener('input', function() {
-    checkTxt('pseudo', 5, 4); //label 5 minimum de lettre 4
-    verifiedForm();
-});
-email.addEventListener('input', function() {
-    checkEmail(6); //label 6
-    verifiedForm();
-});
+// pseudo.addEventListener('input', function() {
+//     checkTxt('pseudo', 5, 4); //label 5 minimum de lettre 4
+//     verifiedForm();
+// });
+// email.addEventListener('input', function() {
+//     checkEmail(6); //label 6
+//     verifiedForm();
+// });
 
-password.addEventListener('input', function() {
-    checkTxt('password', 7, 6); //label 7 minimum de lettre 6
-    verifiedForm();
-});
-passwordConf.addEventListener('input', function() {
-    checkPass(8); //label 8 check if password == passwordConf
-    verifiedForm();
-});
-send.addEventListener('click', function(e) {
-    e.preventDefault();
-    alert("Bravo!! Vous avez bien rempli la formulaire !");
+// password.addEventListener('input', function() {
+//     checkTxt('password', 7, 6); //label 7 minimum de lettre 6
+//     verifiedForm();
+// });
+// passwordConf.addEventListener('input', function() {
+//     checkPass(8); //label 8 check if password == passwordConf
+//     verifiedForm();
+// });
+// send.addEventListener('click', function(e) {
+//     e.preventDefault();
+//     alert("Bravo!! Vous avez bien rempli la formulaire !");
+// });
+$(document).ready(function () {
+    $("#OperationSystems").select2();
 })
 $(document).ready(function () {
-    $("#sports").select2();
+    $("#OfficeModel").select2();
 })

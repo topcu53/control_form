@@ -13,70 +13,330 @@
 </head>
 
 <body>
-    <h1>Smart Registration Form</h1>
+    <h1>BİLGİSAYAR KURULUM FORMU</h1>
     <div class="details">Material Design Theme</div>
     <div class="details">Responsive Design</div>
     <form method="POST" action="">
         <div class="col">
             <div class="minput">
                 <span class="hSpan">İşletim sistemi hangi sürüm/versiyon kuruldu?</span>
-                <select id="sports" class="minputSelect">
+                <select id="OperationSystems" class="minputSelect">
                     <option value="" selected hidden disabled>--İşletim Sistemi Seçiniz--</option>
-                    <option value="morocco">Windows 98 (1998)</option>
-                    <option value="algeria">Windows Me (2000)</option>
-                    <option value="tunisia">Windows XP x32</option>
-                    <option value="tunisia">Windows 7 Pro x32</option>
-                    <option value="tunisia">Windows 7 Pro x64</option>
-                    <option value="tunisia">Windows 8 Pro</option>
-                    <option value="tunisia">Windows 8.1 Pro</option>
-                    <option value="tunisia">Windows 10 Pro x64 21H2</option>
-                    <option value="tunisia">Windows 10 Pro x64 22H2</option>
-                    <option value="tunisia">Windows 11 Pro x64 21H2</option>
-                    <option value="tunisia">Windows 11 Pro x64 22H2</option>
-                    <option value="tunisia">Windows 11 Pro x64 23H2</option>
-                    <option value="tunisia">Ubuntu</option>
-                    <option value="tunisia">Linux Mint</option>
-                    <option value="tunisia">Pardus</option>
-                    <option value="tunisia">macOS Sonoma</option>
-                    <option value="tunisia">macOS Ventura</option>
-                    <option value="tunisia">macOS Monterey</option>
-                    <option value="tunisia">macOS Big Sur</option>
-                    <option value="tunisia">macOS Catalina</option>
-                    <option value="tunisia">macOS Mojave</option>
-                    <option value="tunisia">macOS High Sierra</option>
-                    <option value="tunisia">macOS Sierra</option>
-                    <option value="tunisia">OS X El Capitan</option>
-                    <option value="tunisia">OS X Yosemite</option>
-                    <option value="tunisia">macOS High Sierra</option>
-                    <option value="tunisia">macOS Sierra</option>
-                    <option value="tunisia">OS X El Capitan</option>
-                    <option value="tunisia">OS X Yosemite</option>
-                    <option value="tunisia">OS X Mavericks</option>
-                    <option value="tunisia">OS X Mountain Lion</option>
-                    <option value="tunisia">OS X Lion</option>
-                    <option value="tunisia">Mac OS X Snow Leopard</option>
-                    <option value="tunisia">Mac OS X Leopard</option>
-                    <option value="tunisia">Mac OS X Tiger</option>
-                    <option value="tunisia">Mac OS X Panther</option>
-                    <option value="tunisia">Mac OS X Jaguar</option>
-                    <option value="tunisia">Mac OS X Puma</option>
-                    <option value="tunisia">Mac OS X Cheetah</option>
+                    <option value="1">Windows 98 (1998)</option>
+                    <option value="2">Windows Me (2000)</option>
+                    <option value="3">Windows XP x32</option>
+                    <option value="4">Windows 7 Pro x32</option>
+                    <option value="5">Windows 7 Pro x64</option>
+                    <option value="6">Windows 8 Pro</option>
+                    <option value="7">Windows 8.1 Pro</option>
+                    <option value="8">Windows 10 Pro x64 21H2</option>
+                    <option value="9">Windows 10 Pro x64 22H2</option>
+                    <option value="10">Windows 11 Pro x64 21H2</option>
+                    <option value="11">Windows 11 Pro x64 22H2</option>
+                    <option value="12">Windows 11 Pro x64 23H2</option>
+                    <option value="13">Ubuntu</option>
+                    <option value="14">Linux Mint</option>
+                    <option value="15">Pardus</option>
+                    <option value="16">macOS Sonoma</option>
+                    <option value="17">macOS Ventura</option>
+                    <option value="18">macOS Monterey</option>
+                    <option value="19">macOS Big Sur</option>
+                    <option value="20">macOS Catalina</option>
+                    <option value="21">macOS Mojave</option>
+                    <option value="22">macOS High Sierra</option>
+                    <option value="23">macOS Sierra</option>
+                    <option value="24">OS X El Capitan</option>
+                    <option value="25">OS X Yosemite</option>
+                    <option value="26">macOS High Sierra</option>
+                    <option value="27">macOS Sierra</option>
+                    <option value="28">OS X El Capitan</option>
+                    <option value="29">OS X Yosemite</option>
+                    <option value="30">OS X Mavericks</option>
+                    <option value="31">OS X Mountain Lion</option>
+                    <option value="32">OS X Lion</option>
+                    <option value="33">Mac OS X Snow Leopard</option>
+                    <option value="34">Mac OS X Leopard</option>
+                    <option value="35">Mac OS X Tiger</option>
+                    <option value="36">Mac OS X Panther</option>
+                    <option value="37">Mac OS X Jaguar</option>
+                    <option value="38">Mac OS X Puma</option>
+                    <option value="39">Mac OS X Cheetah</option>
                 </select>
                 <span class="bar"></span>
             </div>
             <div class="control-group">
                 <span class="sex">Standart local admin kullanıcı adı ve parolası oluşturuldu mu?</span>
                 <label class="control control--radio">Evet
-                    <input type="radio" name="radio" id="male" />
+                    <input type="radio" name="localadmin" id="yesLocalAdmin" />
                     <div class="control__indicator"></div>
                 </label>
                 <label class="control control--radio">Hayır
-                    <input type="radio" name="radio" id="femelle" />
+                    <input type="radio" name="localadmin" id="noLocalAdmin" />
+                    <div class="control__indicator"></div>
+                </label>
+            </div>
+            <div class="col">
+                <div class="minput">
+                    <input type="text" id="PcName" dir="auto" required>
+                    <span class="bar"></span>
+                    <label>Şirket talimatlarına uygun verilen bilgisayar adı nedir?</label>
+                </div>
+            </div>
+            <div class="control-group">
+                <span class="sex">Bilgisayar etki alanına dahil edildi mi?</span>
+                <label class="control control--radio">Evet
+                    <input type="radio" name="domain" id="yesDomain" />
+                    <div class="control__indicator"></div>
+                </label>
+                <label class="control control--radio">Hayır
+                    <input type="radio" name="domain" id="noDomain" />
+                    <div class="control__indicator"></div>
+                </label>
+            </div>
+
+            <div class="control-group">
+                <span class="sex">Bilgisayara ait güncel sürücülerin kurulumu yapıldı mı?</span>
+                <label class="control control--radio">Evet
+                    <input type="radio" name="driver" id="yesDriver" />
+                    <div class="control__indicator"></div>
+                </label>
+                <label class="control control--radio">Hayır
+                    <input type="radio" name="driver" id="noDriver" />
                     <div class="control__indicator"></div>
                 </label>
             </div>
             <div class="control-group">
-                <span class="sex">Şirket talimatına uygun bilgisayar adı ne verildi?</span>
+                <span class="sex">Uzak bağlantı ayarları ve güvenlik duvarı ayarları yapıldı mı?</span>
+                <label class="control control--radio">Evet
+                    <input type="radio" name="rdp" id="yesRdp" />
+                    <div class="control__indicator"></div>
+                </label>
+                <label class="control control--radio">Hayır
+                    <input type="radio" name="rdp" id="noRdp" />
+                    <div class="control__indicator"></div>
+                </label>
+            </div>
+            <div class="control-group">
+                <span class="sex">ThightVNC programının güncel versiyonu kuruldu mu?</span>
+                <label class="control control--radio">Evet
+                    <input type="radio" name="vnc" id="yesVnc" />
+                    <div class="control__indicator"></div>
+                </label>
+                <label class="control control--radio">Hayır
+                    <input type="radio" name="vnc" id="noVnc" />
+                    <div class="control__indicator"></div>
+                </label>
+            </div>
+            <div class="control-group">
+                <span class="sex">Winrar programının güncel versiyonu kuruldu mu?</span>
+                <label class="control control--radio">Evet
+                    <input type="radio" name="winrar" id="yesWinrar" />
+                    <div class="control__indicator"></div>
+                </label>
+                <label class="control control--radio">Hayır
+                    <input type="radio" name="winrar" id="noWinrar" />
+                    <div class="control__indicator"></div>
+                </label>
+            </div>
+            <div class="col">
+                <div class="minput">
+                    <span class="hSpan">Microsoft Office hangi sürüm/versiyon kuruldu?</span>
+                    <select id="OfficeModel" class="minputSelect">
+                        <option value="" selected hidden disabled>--Office Sürüm/Versiyon Seçiniz--</option>
+                        <option value="1">Microsoft Office 2010 x86</option>
+                        <option value="2">Microsoft Office 2010 x64</option>
+                        <option value="3">Microsoft Office 2013 x86</option>
+                        <option value="4">Microsoft Office 2013 x64</option>
+                        <option value="5">Microsoft Office 2016 x86</option>
+                        <option value="6">Microsoft Office 2016 x64</option>
+                        <option value="7">Microsoft Office 365 x86</option>
+                        <option value="8">Microsoft Office 365 x64</option>
+                    </select>
+                    <span class="bar"></span>
+                </div>
+            </div>
+            <div class="control-group">
+                <span class="sex">SAP programı kurulumu yapıldı mı?</span>
+                <label class="control control--radio">Evet
+                    <input type="radio" name="sapgui" id="yesSapgui" />
+                    <div class="control__indicator"></div>
+                </label>
+                <label class="control control--radio">Hayır
+                    <input type="radio" name="sapgui" id="noSapgui" />
+                    <div class="control__indicator"></div>
+                </label>
+            </div>
+            <div class="control-group">
+                <span class="sex">Analysis programı kurulup çalıştığı test edildi mi?</span>
+                <label class="control control--radio">Evet
+                    <input type="radio" name="analysis" id="yesAnalysis" />
+                    <div class="control__indicator"></div>
+                </label>
+                <label class="control control--radio">Hayır
+                    <input type="radio" name="analysis" id="noAnalysis" />
+                    <div class="control__indicator"></div>
+                </label>
+            </div>
+            <div class="control-group">
+                <span class="sex">Mikro ERP programı kurulup database ayarları yapıldı mı?</span>
+                <label class="control control--radio">Evet
+                    <input type="radio" name="micro" id="yesMicro" />
+                    <div class="control__indicator"></div>
+                </label>
+                <label class="control control--radio">Hayır
+                    <input type="radio" name="micro" id="noMicro" />
+                    <div class="control__indicator"></div>
+                </label>
+            </div>
+            <div class="control-group">
+                <span class="sex">Analyzer programı kurulup çalıştığı test edildi mi?</span>
+                <label class="control control--radio">Evet
+                    <input type="radio" name="analyzer" id="yesAnalyzer" />
+                    <div class="control__indicator"></div>
+                </label>
+                <label class="control control--radio">Hayır
+                    <input type="radio" name="analyzer" id="noAnalyzer" />
+                    <div class="control__indicator"></div>
+                </label>
+            </div>
+            <div class="control-group">
+                <span class="sex">EPM programı kurulup çalıştığı test edildi mi?</span>
+                <label class="control control--radio">Evet
+                    <input type="radio" name="epm" id="yesEpm" />
+                    <div class="control__indicator"></div>
+                </label>
+                <label class="control control--radio">Hayır
+                    <input type="radio" name="epm" id="noEpm" />
+                    <div class="control__indicator"></div>
+                </label>
+            </div>
+            <div class="control-group">
+                <span class="sex">Global Protect kurulumu yapıldı mı?</span>
+                <label class="control control--radio">Evet
+                    <input type="radio" name="global" id="yesGlobal" />
+                    <div class="control__indicator"></div>
+                </label>
+                <label class="control control--radio">Hayır
+                    <input type="radio" name="global" id="noGlobal" />
+                    <div class="control__indicator"></div>
+                </label>
+            </div>
+            <div class="control-group">
+                <span class="sex">Trend Micro OfficeScan antivirüs yazılımı kuruldu mu?</span>
+                <label class="control control--radio">Evet
+                    <input type="radio" name="trendmicro" id="yesTrend" />
+                    <div class="control__indicator"></div>
+                </label>
+                <label class="control control--trendmicro">Hayır
+                    <input type="radio" name="trendmicro" id="noTrend" />
+                    <div class="control__indicator"></div>
+                </label>
+            </div>
+            <div class="control-group">
+                <span class="sex">Forcepoint kurulumu yapıldı mı?</span>
+                <label class="control control--radio">Evet
+                    <input type="radio" name="force" id="yesForce" />
+                    <div class="control__indicator"></div>
+                </label>
+                <label class="control control--radio">Hayır
+                    <input type="radio" name="force" id="noForce" />
+                    <div class="control__indicator"></div>
+                </label>
+            </div>
+            <div class="control-group">
+                <span class="sex">Adobe Acrobat Reader kurulumu yapıldı mı?</span>
+                <label class="control control--radio">Evet
+                    <input type="radio" name="acrobat" id="yesAcrobat" />
+                    <div class="control__indicator"></div>
+                </label>
+                <label class="control control--radio">Hayır
+                    <input type="radio" name="acrobat" id="noAcrobat" />
+                    <div class="control__indicator"></div>
+                </label>
+            </div>
+            <div class="control-group">
+                <span class="sex">.Net 3.5 kurulumu yapıldı mı?</span>
+                <label class="control control--radio">Evet
+                    <input type="radio" name="dotnet35" id="yesDotnet35" />
+                    <div class="control__indicator"></div>
+                </label>
+                <label class="control control--radio">Hayır
+                    <input type="radio" name="dotnet35" id="noDotnet35" />
+                    <div class="control__indicator"></div>
+                </label>
+            </div>
+            <div class="control-group">
+                <span class="sex">Google Chrome kurulum/güncelleme işlemi yapıldı mı?</span>
+                <label class="control control--radio">Evet
+                    <input type="radio" name="chrome" id="yesChrome" />
+                    <div class="control__indicator"></div>
+                </label>
+                <label class="control control--radio">Hayır
+                    <input type="radio" name="chrome" id="noChrome" />
+                    <div class="control__indicator"></div>
+                </label>
+            </div>
+            <div class="control-group">
+                <span class="sex">Microsoft Edge güncelleme yapıldı mı?</span>
+                <label class="control control--radio">Evet
+                    <input type="radio" name="edge" id="yesEdge" />
+                    <div class="control__indicator"></div>
+                </label>
+                <label class="control control--radio">Hayır
+                    <input type="radio" name="edge" id="noEdge" />
+                    <div class="control__indicator"></div>
+                </label>
+            </div>
+            <div class="control-group">
+                <span class="sex">İşletim sistemi lisansı aktif edildi mi?</span>
+                <label class="control control--radio">Evet
+                    <input type="radio" name="OSlisans" id="yesOSlisans" />
+                    <div class="control__indicator"></div>
+                </label>
+                <label class="control control--radio">Hayır
+                    <input type="radio" name="OSlisans" id="noOSlisans" />
+                    <div class="control__indicator"></div>
+                </label>
+            </div>
+            <div class="control-group">
+                <span class="sex">Microsoft Office lisansı aktfi edildi mi?</span>
+                <label class="control control--radio">Evet
+                    <input type="radio" name="MSlisans" id="yesMSlisans" />
+                    <div class="control__indicator"></div>
+                </label>
+                <label class="control control--radio">Hayır
+                    <input type="radio" name="MSlisans" id="noMSlisans" />
+                    <div class="control__indicator"></div>
+                </label>
+            </div>
+            <div class="control-group">
+                <span class="sex">Windows Update yapılıp otomatik update kapatıldı mı?</span>
+                <label class="control control--radio">Evet
+                    <input type="radio" name="winupdate" id="yesWinupdate" />
+                    <div class="control__indicator"></div>
+                </label>
+                <label class="control control--radio">Hayır
+                    <input type="radio" name="winupdate" id="noWinupdate" />
+                    <div class="control__indicator"></div>
+                </label>
+            </div>
+
+
+
+
+
+
+            <!--           
+            <div class="minput">
+                <input type="text" id="lname" dir="auto" required>
+                <span class="bar"></span>
+                <label>Last Name</label>
+            </div> -->
+
+        </div>
+        <div class="col">
+            <div class="control-group">
+                <span class="sex">Kullanıcı oturumu açıldı mı?</span>
                 <label class="control control--radio">Evet
                     <input type="radio" name="radio" id="male" />
                     <div class="control__indicator"></div>
@@ -85,57 +345,67 @@
                     <input type="radio" name="radio" id="femelle" />
                     <div class="control__indicator"></div>
                 </label>
-                <div class="minput">
-                    <input type="text" id="fname" dir="auto" required>
-                    <span class="bar"></span>
-                    <label>Verilen bilgisayar adını giriniz</label>
-                </div>
-            </div>
-            <div class="minput">
-                <input type="text" id="fname" dir="auto" required>
-                <span class="bar"></span>
-                <label>First Name</label>
-            </div>
-            <div class="minput">
-                <input type="text" id="lname" dir="auto" required>
-                <span class="bar"></span>
-                <label>Last Name</label>
-            </div>
-            <div class="minput">
-                <input type="number" id="age" dir="auto" required>
-                <span class="bar"></span>
-                <label>Age</label>
             </div>
             <div class="control-group">
-                <span class="sex">Sex :</span>
-                <label class="control control--radio">Male
+                <span class="sex">Var ise yedekleri eksiksiz atıldı mı?</span>
+                <label class="control control--radio">Evet
                     <input type="radio" name="radio" id="male" />
                     <div class="control__indicator"></div>
                 </label>
-                <label class="control control--radio">Female
+                <label class="control control--radio">Hayır
                     <input type="radio" name="radio" id="femelle" />
                     <div class="control__indicator"></div>
                 </label>
             </div>
-            <div class="minput">
-                <div class="select">
-                    <select id="pays" class="chosen">
-                        <option value="">-- Country --</option>
-                        <option value="morocco">Morocco</option>
-                        <option value="algeria">Algeria</option>
-                        <option value="tunisia">Tunisia</option>
-                    </select>
-                    <div class="select__arrow"></div>
-                </div>
+            <div class="control-group">
+                <span class="sex">Mail hesabı kurulup veri dosyası ve imza ayarları yapıldı mı?</span>
+                <label class="control control--radio">Evet
+                    <input type="radio" name="radio" id="male" />
+                    <div class="control__indicator"></div>
+                </label>
+                <label class="control control--radio">Hayır
+                    <input type="radio" name="radio" id="femelle" />
+                    <div class="control__indicator"></div>
+                </label>
             </div>
-        </div>
-        <div class="col">
-            <div class="minput">
-                <input type="text" id="pseudo" dir="auto" required>
+            <div class="control-group">
+                <span class="sex">SAP logon ve services dosya ayarları yapıldı mı?</span>
+                <label class="control control--radio">Evet
+                    <input type="radio" name="radio" id="male" />
+                    <div class="control__indicator"></div>
+                </label>
+                <label class="control control--radio">Hayır
+                    <input type="radio" name="radio" id="femelle" />
+                    <div class="control__indicator"></div>
+                </label>
+            </div>
+            <div class="control-group">
+                <span class="sex">Teams kurulumu yapılıp oturum açıldı mı?</span>
+                <label class="control control--radio">Evet
+                    <input type="radio" name="radio" id="male" />
+                    <div class="control__indicator"></div>
+                </label>
+                <label class="control control--radio">Hayır
+                    <input type="radio" name="radio" id="femelle" />
+                    <div class="control__indicator"></div>
+                </label>
+            </div>
+            <div class="control-group">
+                <span class="sex">Bilgisayar demirbaş kaydı/devri yapıldı mı?</span>
+                <label class="control control--radio">Evet
+                    <input type="radio" name="radio" id="male" />
+                    <div class="control__indicator"></div>
+                </label>
+                <label class="control control--radio">Hayır
+                    <input type="radio" name="radio" id="femelle" />
+                    <div class="control__indicator"></div>
+                </label>
+            </div>
 
-                <span class="bar"></span>
-                <label>Username</label>
-            </div>
+
+
+
+
 
             <div class="minput">
                 <input type="email" id="email" dir="ltr" class="" required>
