@@ -10,7 +10,124 @@ body {
     margin: 0 auto;
     min-height: 100%;
     font-family: 'Yanone Kaffeesatz', Consolas;
+
 }
+
+/* denemeler */
+* { box-sizing:border-box; }
+
+
+/* form starting stylings ------------------------------- */
+.group        { 
+  position:relative; 
+  margin-bottom:45px; 
+}
+.group input         {
+    font-size: 20px;
+    padding: 1px 4px;
+    display:block;
+  width:300px;
+  border:none;
+  border-bottom:1px solid #afafaf;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  letter-spacing: 1px;
+  color: #3E4651;
+  -webkit-border-radius: 2px 0 0 2px;
+  -moz-border-radius: 2px 0 0 2px;
+  border-radius: 2px 0 0 2px;
+  border-bottom: 1px solid #dadada;
+}
+.group input:focus     { outline:none; }
+
+/* LABEL ======================================= */
+.group label          {
+    color: #afafaf;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    font-size: 20px;
+  font-weight:normal;
+  position:absolute;
+  pointer-events:none;
+  left: 5px;
+  top: -2px;
+  transition:0.2s ease all; 
+  -moz-transition:0.2s ease all; 
+  -webkit-transition:0.2s ease all;
+
+
+
+
+   
+}
+
+
+/* active state */
+.group input:focus ~ label, .group input:valid ~ label    {
+  top:-20px;
+  font-size:18px;
+  color:#afafaf;
+}
+
+/* BOTTOM BARS ================================= */
+.group .cizgi  { position:relative; display:block; width:300px; }
+.group .cizgi:before, .cizgi:after   {
+  content:'';
+  height:2px; 
+  width:0;
+  bottom:0px; 
+  position:absolute;
+  background:#afafaf; 
+  transition:0.2s ease all; 
+  -moz-transition:0.2s ease all; 
+  -webkit-transition:0.2s ease all;
+
+  
+}
+.group .cizgi:before {
+  left:50%;
+}
+.group .cizgi:after {
+  right:50%; 
+}
+
+/* active state */
+.group input:focus ~ .cizgi:before, .group input:focus ~ .cizgi:after {
+  width:50%;
+}
+
+
+/* HIGHLIGHTER ================================== */
+.group .highlight {
+  position:absolute;
+  height:60%; 
+  width:100px; 
+  top:25%; 
+  left:0;
+  pointer-events:none;
+  opacity:0.5;
+}
+
+/* active state */
+.group input:focus ~ .group .highlight {
+  -webkit-animation:inputHighlighter 0.3s ease;
+  -moz-animation:inputHighlighter 0.3s ease;
+  animation:inputHighlighter 0.3s ease;
+}
+
+/* ANIMATIONS ================ */
+@-webkit-keyframes inputHighlighter {
+  from { background:#afafaf; }
+  to  { width:0; background:transparent; }
+}
+@-moz-keyframes inputHighlighter {
+  from { background:#afafaf; }
+  to  { width:0; background:transparent; }
+}
+@keyframes inputHighlighter {
+  from { background:#afafaf; }
+  to  { width:0; background:transparent; }
+}
+/* denemeler */
+
 .field input {
     background: 0;
     border: 0;
@@ -83,134 +200,6 @@ form {
     width: 400px;
     min-width: 300px;
 }
-.bilgiler{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-.bilgiler .kinput{
-    position: relative;
-    margin: 26px 10px;
-    width: 90%;
-    max-width: 400px;
-}
-.kinput input {
-    font-size: 20px;
-    padding: 1px 4px;
-    display: block;
-    width: 100%;
-    border: none;
-    font-family: 'Yanone Kaffeesatz', sans-serif;
-    letter-spacing: 1px;
-    color: #3E4651;
-    -webkit-border-radius: 2px 0 0 2px;
-    -moz-border-radius: 2px 0 0 2px;
-    border-radius: 2px 0 0 2px;
-    border-bottom: 1px solid #dadada;
-}
-
-.kinput input[type="number"] {
-    width: 60px;
-    padding-right: 0;
-}
-
-.kinput input[type="number"] ~ .bar {
-    width: 60px;
-}
-
-.kinput input[type="number"] ~ label {
-    margin: 0;
-}
-
-.kinput input:focus {
-    outline: none;
-}
-
-.kinput .minputSelect{
-    font-size: 20px;
-    padding: 1px 4px;
-    display: block;
-    width: 100%;
-    border: none;
-    font-family: 'Yanone Kaffeesatz', sans-serif;
-    letter-spacing: 1px;
-    color: #3E4651;
-    -webkit-border-radius: 2px 0 0 2px;
-    -moz-border-radius: 2px 0 0 2px;
-    border-radius: 2px 0 0 2px;
-    border-bottom: 1px solid #dadada;
-}
-
-.kinput label {
-    color: #afafaf;
-    font-size: 20px;
-    font-weight: normal;
-    position: absolute;
-    pointer-events: none;
-    left: 5px;
-    top: -2px;
-    transition: 0.2s ease all;
-    -moz-transition: 0.2s ease all;
-    -webkit-transition: 0.2s ease all;
-}
-
-.kinput .hSpan{
-    color: #afafaf;
-    font-size: 20px;
-    font-weight: normal;
-    pointer-events: none;
-    left: 5px;
-    top: -2px;
-    transition: 0.2s ease all;
-    -moz-transition: 0.2s ease all;
-    -webkit-transition: 0.2s ease all;
-}
-
-
-.kinput textarea:focus ~ label,
-.kinput textarea:valid ~ label,
-.kinput input:focus ~ label,
-.kinput input:valid ~ label,
-.kinput .up ~ label {
-    top: -19px;
-    font-size: 18px;
-}
-
-.kinput .bar {
-    position: relative;
-    display: block;
-    width: 100%;
-}
-
-.kinput .bar:before,
-.kinput .bar:after {
-    content: '';
-    height: 2px;
-    width: 0;
-    bottom: 0;
-    background-color: #afafaf;
-    position: absolute;
-    transition: 0.2s ease all;
-    -moz-transition: 0.2s ease all;
-    -webkit-transition: 0.2s ease all;
-}
-
-.kinput .bar:before {
-    left: 50%;
-}
-
-.kinput .bar:after {
-    right: 50%;
-}
-
-.kinput input:focus ~ .bar:before,
-.kinput input:focus ~ .bar:after {
-    width: 50%;
-}
-
-
-
 
 
 
