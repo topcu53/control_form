@@ -14,6 +14,7 @@
 
 <body>
     <h1>BİLGİSAYAR KURULUM FORMU</h1>
+    <div class="info"><h1>hello</h1></div>
     <div class="kullanici">
         <div class="group">      
             <input type="text" required>
@@ -40,7 +41,7 @@
           <div class="group">
             <div class="minput">
                 <span class="hSpan">Lokasyon Bilgisi</span>
-                <select id="lokasyon" class="minputSelect">
+                <select onchange="myFunction()" id="lokasyon" class="minputSelect">
                     <option value="" selected hidden disabled>--Lokasyon bilgisi seçiniz--</option>
                     <option value="1">Bilgi Sistemleri</option>
                     <option value="2">Gıda Dışı</option>
