@@ -24,15 +24,30 @@
           </div>
           <div class="group">
             <div class="minput">
+                <span class="hSpan">Şube Bilgisi</span>
+                <select id="city" class="minputSelect">
+                    <option value="" selected hidden disabled>--Şube Seçiniz--</option>
+                    <option value="BM">Bursa Merkez</option>
+                    <option value="BKP">Bursa Kaplıkaya</option>
+                    <option value="BGU">Bursa Gürsu</option>
+                    <option value="BIN">Bursa İnegöl</option>
+                    <option value="BAT">Bursa Ataevler</option>
+                    <option value="BOZ">Bursa Özlüce</option>
+                </select>
+                <span class="bar"></span>
+            </div>
+          </div>
+          <div class="group">
+            <div class="minput">
                 <span class="hSpan">Ünvan Bilgisi</span>
                 <select id="unvanlar" class="minputSelect">
                     <option value="" selected hidden disabled>--Ünvan bilgisi seçiniz--</option>
-                    <option value="1">Müdür</option>
-                    <option value="1">Yönetici</option>
-                    <option value="1">Uzman Yardımcısı</option>
-                    <option value="2">Kıdemli Uzman Yardımcısı</option>
-                    <option value="3">Uzman</option>
-                    <option value="4">Kıdemli Uzman</option>
+                    <option value="MDR">Müdür</option>
+                    <option value="YNT">Yönetici</option>
+                    <option value="UYRD">Uzman Yardımcısı</option>
+                    <option value="KUYRD">Kıdemli Uzman Yardımcısı</option>
+                    <option value="UZM">Uzman</option>
+                    <option value="KUZM">Kıdemli Uzman</option>
                 </select>
                 <span class="bar"></span>
             </div>
@@ -43,12 +58,12 @@
                 <span class="hSpan">Lokasyon Bilgisi</span>
                 <select onchange="myFunction()" id="lokasyon" class="minputSelect">
                     <option value="" selected hidden disabled>--Lokasyon bilgisi seçiniz--</option>
-                    <option value="1">Bilgi Sistemleri</option>
-                    <option value="2">Gıda Dışı</option>
-                    <option value="3">İnsan Kaynakları</option>
-                    <option value="4">Hızlı Tüketim</option>
-                    <option value="4">Taze Gıda</option>
-                    <option value="4">Lojistik Satınalma</option>
+                    <option value="BS">Bilgi Sistemleri</option>
+                    <option value="GD">Gıda Dışı</option>
+                    <option value="IK">İnsan Kaynakları</option>
+                    <option value="HT">Hızlı Tüketim</option>
+                    <option value="TG">Taze Gıda</option>
+                    <option value="LS">Lojistik Satınalma</option>
                 </select>
                 <span class="bar"></span>
             </div>

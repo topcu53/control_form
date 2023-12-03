@@ -161,12 +161,29 @@ $(document).ready(function () {
 $(document).ready(function () {
     $("#lokasyon").select2();
 })
+$(document).ready(function () {
+    $("#city").select2();
+})
 const lokasyon =document.getElementById("lokasyon");
+const unvanlar= document.getElementById("unvanlar");
+const city= document.getElementById("city");
+
+var brlsm;
+var unv,lks,cty,mlsn;
 const inf =document.querySelector(".info h1")
 function myFunction(){
+    let date = new Date();
+    mlsn= date.getSeconds()
     
-    var i=lokasyon.selectedIndex;
-    inf.textContent=lokasyon.options[i].text;
+    lks=lokasyon.options[lokasyon.selectedIndex];
+    unv=unvanlar.options[parseInt(unvanlar.selectedIndex)];
+    cty=city.options[parseInt(city.selectedIndex)];
+    // var i=lokasyon.selectedIndex;
+    // inf.textContent=lokasyon.options[i].value;
+     brlsm=cty.value+"-"+lks.value+unv.value+mlsn;
+     inf.textContent=brlsm;
+     
+
     // alert()document.writeln(lokasyon.options[i].text)
 }
 
