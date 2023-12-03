@@ -14,17 +14,52 @@
 
 <body>
     <h1>BİLGİSAYAR KURULUM FORMU</h1>
-    <div class="details">Material Design Theme</div>
-    <div class="details">Responsive Design</div>
-    <div class="group">      
-        <input type="text" required>
-        <span class="highlight"></span>
-        <span class="cizgi"></span>
-        <label>Name</label>
-      </div>
-
-   
-    
+    <div class="kullanici">
+        <div class="group">      
+            <input type="text" required>
+            <span class="highlight"></span>
+            <span class="cizgi"></span>
+            <label>Kullanıcı Adı</label>
+          </div>
+          <div class="group">
+            <div class="minput">
+                <span class="hSpan">Ünvan Bilgisi</span>
+                <select id="unvanlar" class="minputSelect">
+                    <option value="" selected hidden disabled>--Ünvan bilgisi seçiniz--</option>
+                    <option value="1">Müdür</option>
+                    <option value="1">Yönetici</option>
+                    <option value="1">Uzman Yardımcısı</option>
+                    <option value="2">Kıdemli Uzman Yardımcısı</option>
+                    <option value="3">Uzman</option>
+                    <option value="4">Kıdemli Uzman</option>
+                </select>
+                <span class="bar"></span>
+            </div>
+          </div>
+          
+          <div class="group">
+            <div class="minput">
+                <span class="hSpan">Lokasyon Bilgisi</span>
+                <select id="lokasyon" class="minputSelect">
+                    <option value="" selected hidden disabled>--Lokasyon bilgisi seçiniz--</option>
+                    <option value="1">Bilgi Sistemleri</option>
+                    <option value="2">Gıda Dışı</option>
+                    <option value="3">İnsan Kaynakları</option>
+                    <option value="4">Hızlı Tüketim</option>
+                    <option value="4">Taze Gıda</option>
+                    <option value="4">Lojistik Satınalma</option>
+                </select>
+                <span class="bar"></span>
+            </div>
+          </div>
+        
+        <div class="group">      
+            <input type="date" required>
+            <span class="highlight"></span>
+            <span class="cizgi"></span>
+            <label></label>
+          </div>
+    </div>
     <form method="POST" action="">
        
         <div class="col">
@@ -331,21 +366,6 @@
                     <div class="control__indicator"></div>
                 </label>
             </div>
-
-
-
-
-
-
-            <!--           
-            <div class="minput">
-                <input type="text" id="lname" dir="auto" required>
-                <span class="bar"></span>
-                <label>Last Name</label>
-            </div> -->
-
-        </div>
-        <div class="col">
             <div class="control-group">
                 <span class="sex">Kullanıcı oturumu açıldı mı?</span>
                 <label class="control control--radio">Evet
@@ -418,23 +438,7 @@
 
 
 
-            <div class="minput">
-                <input type="email" id="email" dir="ltr" class="" required>
-                <span class="bar"></span>
-                <label>Email</label>
-            </div>
-
-            <div class="minput">
-                <input type="password" id="password" dir="auto" required>
-                <span class="bar"></span>
-                <label>Passwrod</label>
-            </div>
-
-            <div class="minput">
-                <input type="password" id="passwordConf" required>
-                <span class="bar"></span>
-                <label>Retype Password</label>
-            </div>
+            
             <div class="control-group">
 
                 <label class="control control--checkbox">Join Our Newsletter & Marketing Communication.
@@ -448,7 +452,22 @@
 
                 <input type="submit" id="send" value="Submit" disabled="true" style="padding:5px;padding-top:7px;">
             </div>
-        </div>
+
+
+
+
+
+            <!--           
+            <div class="minput">
+                <input type="text" id="lname" dir="auto" required>
+                <span class="bar"></span>
+                <label>Last Name</label>
+            </div> -->
+
+        <!-- </div>
+        <div class="col">
+            
+        </div> -->
     </form>
     <script src="control.js"></script>
 </body>

@@ -17,6 +17,12 @@ body {
 * { box-sizing:border-box; }
 
 
+.kullanici{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
 /* form starting stylings ------------------------------- */
 .group        { 
   position:relative; 
@@ -26,7 +32,7 @@ body {
     font-size: 20px;
     padding: 1px 4px;
     display:block;
-  width:300px;
+  width:215px;
   border:none;
   border-bottom:1px solid #afafaf;
   font-family: 'Yanone Kaffeesatz', sans-serif;
@@ -68,7 +74,7 @@ body {
 }
 
 /* BOTTOM BARS ================================= */
-.group .cizgi  { position:relative; display:block; width:300px; }
+.group .cizgi  { position:relative; display:block; width:215px; }
 .group .cizgi:before, .cizgi:after   {
   content:'';
   height:2px; 

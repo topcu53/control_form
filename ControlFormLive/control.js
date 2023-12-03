@@ -151,3 +151,15 @@ $(document).ready(function () {
 $(document).ready(function () {
     $("#OfficeModel").select2();
 })
+
+$(document).ready(function () {
+    $("#unvanlar").select2();
+})
+$(document).ready(function () {
+    $("#lokasyon").select2();
+})
+
+const location =document.getElementById("lokasyon");
+console.log(location);
+
+
