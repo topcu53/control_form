@@ -14,19 +14,21 @@
 
 <body>
     <h1>BİLGİSAYAR KURULUM FORMU</h1>
-    <div class="info"><h1>hello</h1></div>
+    <div class="info">
+        <h1>hello</h1>
+    </div>
     <div class="kullanici">
-        <div class="group">      
+        <div class="group">
             <input type="text" required>
             <span class="highlight"></span>
             <span class="cizgi"></span>
             <label>Kullanıcı Adı</label>
-          </div>
-          <div class="group">
+        </div>
+        <div class="group">
             <div class="minput">
                 <span class="hSpan">Şube Bilgisi</span>
                 <select id="city" class="minputSelect">
-                    
+
                     <option value="" selected hidden disabled>--Şube Seçiniz--</option>
                     <option value="GCT">Geçit İşletme</option>
                     <option value="BRM">Bursa Merkez</option>
@@ -36,44 +38,54 @@
                     <option value="BAT">Bursa Ataevler</option>
                     <option value="BOZ">Bursa Özlüce</option>
                     <option value="IZM">İzmir AVM</option>
-                    
+
                 </select>
                 <span class="bar"></span>
             </div>
-          </div>
-          <div class="group">
+        </div>
+        <div class="group">
             <div class="minput">
                 <span class="hSpan">Ünvan Bilgisi</span>
                 <select id="unvanlar" class="minputSelect">
                     <option value="" selected hidden disabled>--Ünvan bilgisi seçiniz--</option>
-                    <option value="IMD">İşletme Müdürü</option>
-                    <option value="IMY">İşletme Müdür Yardımcısı</option>
-                    <option value="GSS">Görsel Sunum Sorumlusu</option>
-                    <option value="MKS">Market Kasa Şefi</option>
-                    <option value="SKY">Stok Kontrol Yöneticisi</option>
-                    <option value="GVA">Güvenlik Amiri</option>
-                    <option value="SKY">Stok Kontrol Yöneticisi</option>
-                    <option value="GAK">Güvenlik Arka Kapı</option>
-                    <option value="SEF">Şef</option>
-
-
-
-
                     <option value="MDR">Müdür</option>
+                    <option value="MDY">Müdür Yardımcısı</option>
                     <option value="YNT">Yönetici</option>
                     <option value="UYR">Uzman Yardımcısı</option>
                     <option value="KUY">Kıdemli Uzman Yardımcısı</option>
                     <option value="UZM">Uzman</option>
                     <option value="KUZ">Kıdemli Uzman</option>
+                    <option value="IMD">İşletme Müdürü</option>
+                    <option value="IMY">İşletme Müdür Yardımcısı</option>
+                    <option value="GSS">Görsel Sunum Sorumlusu</option>
+                    <option value="MKS">Kasa Şefi</option>
+                    <option value="AKS">Ana Kasa Şefi</option>
+                    <option value="SKY">Stok Kontrol Yöneticisi</option>
+                    <option value="GVA">Güvenlik Amiri</option>
+                    <option value="GAK">Güvenlik Arka Kapı</option>
+                    <option value="SEF">Şef</option>
+                    <option value="SFY">Şef Yardımcısı</option>
+                    <option value="RYS">Reyon Şefi</option>
+                    <option value="MZM">Mağaza Müdürü</option>
+                    <option value="DPS">Depo Şefi</option>
+                    <option value="SRM">Sorumlu</option>
+                    <option value="STS">Satış Şefi</option>
+                    <option value="SHS">Sipariş Hazırlama Sorumlusu</option>
+                    <option value="TTS">Teslimat Sorumlusu</option>
+                    <option value="HMS">Hemşire</option>
+                    <option value="DKT">Doktor</option>
+                    <option value="DSO">Depo ve Sistem Operatorü</option>
+                    <option value="GRF">Grafiker</option>
+                    <option value="DPE">Depo Elemanı</option>
                     <option value="MSD">Müşteri Danışmanı</option>
                 </select>
                 <span class="bar"></span>
             </div>
-          </div>
-          
-          <div class="group">
+        </div>
+
+        <div class="group">
             <div class="minput">
-                <span class="hSpan">Lokasyon Bilgisi</span>
+                <span class="hSpan">Birim Bilgisi</span>
                 <select onchange="myFunction()" id="lokasyon" class="minputSelect">
                     <option value="" selected hidden disabled>--Lokasyon bilgisi seçiniz--</option>
                     <option value="BS">Bilgi Sistemleri</option>
@@ -86,19 +98,19 @@
                 </select>
                 <span class="bar"></span>
             </div>
-          </div>
-        
-        <div class="group">      
+        </div>
+
+        <div class="group">
             <input type="date" required>
             <span class="highlight"></span>
             <span class="cizgi"></span>
             <label></label>
-          </div>
+        </div>
     </div>
     <form method="POST" action="">
-       
+
         <div class="col">
-            
+
             <div class="minput">
                 <span class="hSpan">İşletim sistemi hangi sürüm/versiyon kuruldu?</span>
                 <select id="OperationSystems" class="minputSelect">
@@ -473,7 +485,7 @@
 
 
 
-            
+
             <div class="control-group">
 
                 <label class="control control--checkbox">Join Our Newsletter & Marketing Communication.
@@ -499,7 +511,7 @@
                 <label>Last Name</label>
             </div> -->
 
-        <!-- </div>
+            <!-- </div>
         <div class="col">
             
         </div> -->
