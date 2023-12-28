@@ -1,504 +1,512 @@
-@import url('https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz');
+@import url("https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz");
 
 * {
-    box-sizing: border-box;
-    margin: 0;
+  box-sizing: border-box;
+  margin: 0;
 }
 
 html,
 body {
-    margin: 0 auto;
-    min-height: 100%;
-    font-family: 'Yanone Kaffeesatz', Consolas;
-
+  margin: 0 auto;
+  min-height: 100%;
+  font-family: "Yanone Kaffeesatz", Consolas;
 }
 
 /* denemeler */
-* { box-sizing:border-box; }
+* {
+  box-sizing: border-box;
+}
 
-
-.kullanici{
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
+.kullanici {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
 /* form starting stylings ------------------------------- */
-.group        { 
-  position:relative; 
-  margin-bottom:45px; 
+.group {
+  position: relative;
+  margin-bottom: 45px;
 }
-.group input         {
-    font-size: 20px;
-    padding: 1px 4px;
-    display:block;
-  width:215px;
-  border:none;
-  border-bottom:1px solid #afafaf;
-  font-family: 'Yanone Kaffeesatz', sans-serif;
+.group input {
+  font-size: 20px;
+  padding: 1px 4px;
+  display: block;
+  width: 215px;
+  border: none;
+  border-bottom: 1px solid black;
+  font-family: "Yanone Kaffeesatz", sans-serif;
   letter-spacing: 1px;
-  color: #3E4651;
+  color: #3e4651;
   -webkit-border-radius: 2px 0 0 2px;
   -moz-border-radius: 2px 0 0 2px;
   border-radius: 2px 0 0 2px;
-  border-bottom: 1px solid #dadada;
+  border-bottom: 1px solid black;
 }
-.group input:focus     { outline:none; }
+.group input:focus {
+  outline: none;
+}
 
 /* LABEL ======================================= */
-.group label          {
-    color: #afafaf;
-    font-family: 'Yanone Kaffeesatz', sans-serif;
-    font-size: 20px;
-  font-weight:normal;
-  position:absolute;
-  pointer-events:none;
+.group label {
+  color: bl;
+  font-family: "Yanone Kaffeesatz", sans-serif;
+  font-size: 20px;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
   left: 5px;
   top: -2px;
-  transition:0.2s ease all; 
-  -moz-transition:0.2s ease all; 
-  -webkit-transition:0.2s ease all;
-
-
-
-
-   
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
 }
 
-
 /* active state */
-.group input:focus ~ label, .group input:valid ~ label    {
-  top:-20px;
-  font-size:18px;
-  color:#afafaf;
+.group input:focus ~ label,
+.group input:valid ~ label {
+  top: -20px;
+  font-size: 18px;
+  color: black;
 }
 
 /* BOTTOM BARS ================================= */
-.group .cizgi  { position:relative; display:block; width:215px; }
-.group .cizgi:before, .cizgi:after   {
-  content:'';
-  height:2px; 
-  width:0;
-  bottom:0px; 
-  position:absolute;
-  background:#afafaf; 
-  transition:0.2s ease all; 
-  -moz-transition:0.2s ease all; 
-  -webkit-transition:0.2s ease all;
-
-  
+.group .cizgi {
+  position: relative;
+  display: block;
+  width: 215px;
+}
+.group .cizgi:before,
+.cizgi:after {
+  content: "";
+  height: 2px;
+  width: 0;
+  bottom: 0px;
+  position: absolute;
+  background: black;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
 }
 .group .cizgi:before {
-  left:50%;
+  left: 50%;
 }
 .group .cizgi:after {
-  right:50%; 
+  right: 50%;
 }
 
 /* active state */
-.group input:focus ~ .cizgi:before, .group input:focus ~ .cizgi:after {
-  width:50%;
+.group input:focus ~ .cizgi:before,
+.group input:focus ~ .cizgi:after {
+  width: 50%;
 }
-
 
 /* HIGHLIGHTER ================================== */
 .group .highlight {
-  position:absolute;
-  height:60%; 
-  width:100px; 
-  top:25%; 
-  left:0;
-  pointer-events:none;
-  opacity:0.5;
+  position: absolute;
+  height: 60%;
+  width: 100px;
+  top: 25%;
+  left: 0;
+  pointer-events: none;
+  opacity: 0.5;
 }
 
 /* active state */
 .group input:focus ~ .group .highlight {
-  -webkit-animation:inputHighlighter 0.3s ease;
-  -moz-animation:inputHighlighter 0.3s ease;
-  animation:inputHighlighter 0.3s ease;
+  -webkit-animation: inputHighlighter 0.3s ease;
+  -moz-animation: inputHighlighter 0.3s ease;
+  animation: inputHighlighter 0.3s ease;
 }
 
 /* ANIMATIONS ================ */
 @-webkit-keyframes inputHighlighter {
-  from { background:#afafaf; }
-  to  { width:0; background:transparent; }
+  from {
+    background: black;
+  }
+  to {
+    width: 0;
+    background: transparent;
+  }
 }
 @-moz-keyframes inputHighlighter {
-  from { background:#afafaf; }
-  to  { width:0; background:transparent; }
+  from {
+    background: black;
+  }
+  to {
+    width: 0;
+    background: transparent;
+  }
 }
 @keyframes inputHighlighter {
-  from { background:#afafaf; }
-  to  { width:0; background:transparent; }
+  from {
+    background: black;
+  }
+  to {
+    width: 0;
+    background: transparent;
+  }
 }
 /* denemeler */
 
 .field input {
-    background: 0;
-    border: 0;
-    outline: none;
-    width: 80vw;
-    max-width: 400px;
-    font-size: 1.5em;
-    transition: padding 0.3s 0.2s ease;
-  }
+  background: 0;
+  border: 0;
+  outline: none;
+  width: 80vw;
+  max-width: 400px;
+  font-size: 1.5em;
+  transition: padding 0.3s 0.2s ease;
+}
 .field input:focus {
-    padding-bottom: 10px;
-  }
- .field input:focus + .line:after {
-    transform: scaleX(1);
-  }
-  .field {
-    position: relative;
-  }
-  .field .line {
-    width: 100%;
-    height: 3px;
-    position: absolute;
-    bottom: -8px;
-    background: #bdc3c7;
-  }
-  .field .line:after {
-    content: " ";
-    position: absolute;
-    float: right;
-    width: 100%;
-    height: 3px;
-    transform: scalex(0);
-    transition: transform 0.3s ease;
-    background: #1abc9c;
-  }
+  padding-bottom: 10px;
+}
+.field input:focus + .line:after {
+  transform: scaleX(1);
+}
+.field {
+  position: relative;
+}
+.field .line {
+  width: 100%;
+  height: 3px;
+  position: absolute;
+  bottom: -8px;
+  background: #bdc3c7;
+}
+.field .line:after {
+  content: " ";
+  position: absolute;
+  float: right;
+  width: 100%;
+  height: 3px;
+  transform: scalex(0);
+  transition: transform 0.3s ease;
+  background: #1abc9c;
+}
 
 h1 {
-    text-align: center;
-    margin: 40px auto;
-    padding: 10px;
-    width: 260px;
-    border: 3px dashed #3FC380;
-    color: #34495E;
-    letter-spacing: 1px;
-    word-spacing: 3px;
-    font-size: 26px;
-    font-weight: 400;
+  text-align: center;
+  margin: 40px auto;
+  padding: 10px;
+  width: 260px;
+  border: 3px dashed #3fc380;
+  color: #34495e;
+  letter-spacing: 1px;
+  word-spacing: 3px;
+  font-size: 26px;
+  font-weight: 400;
 }
 
 .details {
-    margin: 0 auto;
-    font-size: 18px;
-    font-weight: 300;
-    width: 200px;
-    padding: 2px 5px;
-    letter-spacing: 1px;
-    position: relative;
-    right: 30px;
-    bottom: 30px;
-    color: #6C7A89;
+  margin: 0 auto;
+  font-size: 18px;
+  font-weight: 300;
+  width: 200px;
+  padding: 2px 5px;
+  letter-spacing: 1px;
+  position: relative;
+  right: 30px;
+  bottom: 30px;
+  color: #6c7a89;
 }
 
 form {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .col {
-    width: 400px;
-    min-width: 300px;
+  width: 400px;
+  min-width: 300px;
 }
 
-
-
-
-
 form .minput {
-    position: relative;
-    margin: 26px 10px;
-    width: 90%;
-    max-width: 400px;
+  position: relative;
+  margin: 26px 10px;
+  width: 90%;
+  max-width: 400px;
 }
 
 .minput input {
-    font-size: 20px;
-    padding: 1px 4px;
-    display: block;
-    width: 100%;
-    border: none;
-    font-family: 'Yanone Kaffeesatz', sans-serif;
-    letter-spacing: 1px;
-    color: #3E4651;
-    -webkit-border-radius: 2px 0 0 2px;
-    -moz-border-radius: 2px 0 0 2px;
-    border-radius: 2px 0 0 2px;
-    border-bottom: 1px solid #dadada;
+  font-size: 20px;
+  padding: 1px 4px;
+  display: block;
+  width: 100%;
+  border: none;
+  font-family: "Yanone Kaffeesatz", sans-serif;
+  letter-spacing: 1px;
+  color: #3e4651;
+  -webkit-border-radius: 2px 0 0 2px;
+  -moz-border-radius: 2px 0 0 2px;
+  border-radius: 2px 0 0 2px;
+  border-bottom: 1px solid black;
 }
 
 .minput input[type="number"] {
-    width: 60px;
-    padding-right: 0;
+  width: 60px;
+  padding-right: 0;
 }
 
 input[type="number"] ~ .bar {
-    width: 60px;
+  width: 60px;
 }
 
 input[type="number"] ~ label {
-    margin: 0;
+  margin: 0;
 }
 
 .minput input:focus {
-    outline: none;
+  outline: none;
 }
 
-.minput .minputSelect{
-    font-size: 20px;
-    padding: 1px 4px;
-    display: block;
-    width: 100%;
-    border: none;
-    font-family: 'Yanone Kaffeesatz', sans-serif;
-    letter-spacing: 1px;
-    color: #3E4651;
-    -webkit-border-radius: 2px 0 0 2px;
-    -moz-border-radius: 2px 0 0 2px;
-    border-radius: 2px 0 0 2px;
-    border-bottom: 1px solid #dadada;
+.minput .minputSelect {
+  font-size: 20px;
+  padding: 1px 4px;
+  display: block;
+  width: 100%;
+  border: none;
+  font-family: "Yanone Kaffeesatz", sans-serif;
+  letter-spacing: 1px;
+  color: #3e4651;
+  -webkit-border-radius: 2px 0 0 2px;
+  -moz-border-radius: 2px 0 0 2px;
+  border-radius: 2px 0 0 2px;
+  border-bottom: 1px solid black;
 }
 
 .minput label {
-    color: #afafaf;
-    font-size: 20px;
-    font-weight: normal;
-    position: absolute;
-    pointer-events: none;
-    left: 5px;
-    top: -2px;
-    transition: 0.2s ease all;
-    -moz-transition: 0.2s ease all;
-    -webkit-transition: 0.2s ease all;
+  color: black;
+  font-size: 20px;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 5px;
+  top: -2px;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
 }
 
-.minput .hSpan{
-    color: #afafaf;
-    font-size: 20px;
-    font-weight: normal;
-    pointer-events: none;
-    left: 5px;
-    top: -2px;
-    transition: 0.2s ease all;
-    -moz-transition: 0.2s ease all;
-    -webkit-transition: 0.2s ease all;
+.minput .hSpan {
+  color: black;
+  font-size: 20px;
+  font-weight: normal;
+  pointer-events: none;
+  left: 5px;
+  top: -2px;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
 }
-
 
 textarea:focus ~ label,
 textarea:valid ~ label,
 input:focus ~ label,
 input:valid ~ label,
 .up ~ label {
-    top: -19px;
-    font-size: 18px;
+  top: -19px;
+  font-size: 18px;
 }
 
 .bar {
-    position: relative;
-    display: block;
-    width: 100%;
+  position: relative;
+  display: block;
+  width: 100%;
 }
 
 .bar:before,
 .bar:after {
-    content: '';
-    height: 2px;
-    width: 0;
-    bottom: 0;
-    background-color: #afafaf;
-    position: absolute;
-    transition: 0.2s ease all;
-    -moz-transition: 0.2s ease all;
-    -webkit-transition: 0.2s ease all;
+  content: "";
+  height: 2px;
+  width: 0;
+  bottom: 0;
+  background-color: black;
+  position: absolute;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
 }
 
 .bar:before {
-    left: 50%;
+  left: 50%;
 }
 
 .bar:after {
-    right: 50%;
+  right: 50%;
 }
 
 input:focus ~ .bar:before,
 input:focus ~ .bar:after {
-    width: 50%;
+  width: 50%;
 }
 
-input[type=submit] {
-    cursor: pointer;
-    background-color: #1ABC9C;
-    color: white;
-    border-radius: 3px;
-    border: none;
-    max-width: 125px;
+input[type="submit"] {
+  cursor: pointer;
+  background-color: #1abc9c;
+  color: white;
+  border-radius: 3px;
+  border: none;
+  max-width: 125px;
 }
 
 input:disabled {
-    background: #3B7E87;
-    cursor: not-allowed;
+  background: #3b7e87;
+  cursor: not-allowed;
 }
-
 
 /* Button radio/checkbox/select */
 
 .control {
-    display: block;
-    position: relative;
-    padding-left: 30px;
-    margin-bottom: 10px;
-    cursor: pointer;
-    font-size: 20px;
-    color: #afafaf;
-    margin: 6px 10px;
+  display: block;
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  font-size: 20px;
+  color: black;
+  margin: 6px 10px;
 }
 
 .sex {
-    margin: 26px 10px;
-    font-size: 20px;
-    color: #afafaf;
-    top: -7px;
+  margin: 26px 10px;
+  font-size: 20px;
+  color: black;
+  top: -7px;
 }
 
 .control input {
-    position: absolute;
-    z-index: -1;
-    opacity: 0;
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
 }
 
-
 label.control--radio {
-    width: 80px;
+  width: 80px;
 }
 
 .control__indicator {
-    position: absolute;
-    top: -2px;
-    left: 0;
-    height: 20px;
-    width: 20px;
-    background: #afafaf;
+  position: absolute;
+  top: -2px;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background: #afafaf;
 }
 
 .control--radio .control__indicator {
-    border-radius: 50%;
+  border-radius: 50%;
 }
 
 .control:hover input ~ .control__indicator,
 .control input:focus ~ .control__indicator {
-    background: #ccc;
+  background: #ccc;
 }
 
 .control input:checked ~ .control__indicator {
-    background: #66CC99;
+  background: #66cc99;
 }
 
 .control:hover input:not([disabled]):checked ~ .control__indicator,
 .control input:checked:focus ~ .control__indicator {
-    background: #66CC99;
+  background: #66cc99;
 }
 
 .control input:disabled ~ .control__indicator {
-    background: #e6e6e6;
-    opacity: 0.6;
-    pointer-events: none;
+  background: #e6e6e6;
+  opacity: 0.6;
+  pointer-events: none;
 }
 
 .control__indicator:after {
-    content: '';
-    position: absolute;
-    display: none;
+  content: "";
+  position: absolute;
+  display: none;
 }
 
 .control input:checked ~ .control__indicator:after {
-    display: block;
+  display: block;
 }
 
 .control--checkbox .control__indicator:after {
-    left: 8px;
-    top: 4px;
-    width: 3px;
-    height: 8px;
-    border: solid #fff;
-    border-width: 0 2px 2px 0;
-    transform: rotate(45deg);
+  left: 8px;
+  top: 4px;
+  width: 3px;
+  height: 8px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
 }
 
 .control--checkbox input:disabled ~ .control__indicator:after {
-    border-color: #7b7b7b;
+  border-color: #7b7b7b;
 }
 
 .control--radio .control__indicator:after {
-    left: 7px;
-    top: 7px;
-    height: 6px;
-    width: 6px;
-    border-radius: 50%;
-    background: #fff;
+  left: 7px;
+  top: 7px;
+  height: 6px;
+  width: 6px;
+  border-radius: 50%;
+  background: #fff;
 }
 
 .control--radio input:disabled ~ .control__indicator:after {
-    background: #7b7b7b;
+  background: #7b7b7b;
 }
 
 .select {
-    position: relative;
-    display: inline-block;
-    margin-bottom: 0;
-    width: 100%;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 0;
+  width: 100%;
 }
 
 .select select {
-    display: inline-block;
-    width: 100%;
-    cursor: pointer;
-    padding: 10px;
-    outline: 0;
-    border: 0;
-    border-bottom: 1px solid #afafaf;
-    border-radius: 5px 5px 0 0;
-    background: #fff;
-    color: #afafaf;
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    font-family: 'Yanone Kaffeesatz', sans-serif;
-    font-size: 22px;
+  display: inline-block;
+  width: 100%;
+  cursor: pointer;
+  padding: 10px;
+  outline: 0;
+  border: 0;
+  border-bottom: 1px solid black;
+  border-radius: 5px 5px 0 0;
+  background: #fff;
+  color: black;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  font-family: "Yanone Kaffeesatz", sans-serif;
+  font-size: 22px;
 }
 
 .select option {
-    font-family: Consolas, "monospace";
-    font-size: 18px;
+  font-family: Consolas, "monospace";
+  font-size: 18px;
 }
 
 .select select::-ms-expand {
-    display: none;
+  display: none;
 }
 
 .select select:disabled {
-    opacity: 0.5;
-    pointer-events: none;
+  opacity: 0.5;
+  pointer-events: none;
 }
 
 .select__arrow {
-    position: absolute;
-    top: 17px;
-    right: 14px;
-    width: 0;
-    height: 0;
-    pointer-events: none;
-    border-style: solid;
-    border-width: 8px 5px 0 5px;
-    border-color: #7b7b7b transparent transparent transparent;
+  position: absolute;
+  top: 17px;
+  right: 14px;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+  border-style: solid;
+  border-width: 8px 5px 0 5px;
+  border-color: #7b7b7b transparent transparent transparent;
 }
 
 .select select:disabled ~ .select__arrow {
-    border-top-color: #ccc;
+  border-top-color: #ccc;
 }
