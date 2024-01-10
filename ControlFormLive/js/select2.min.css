@@ -11,11 +11,11 @@
   background: #fff;
   font-family: "Yanone Kaffeesatz", sans-serif;
   font-size: 20px;
-  color: #000000;
+  color: #afafaf;
 }
 
 .select2-container .select2-selection--single {
-  color: #000000;
+  color: #afafaf;
   box-sizing: border-box;
   cursor: pointer;
   display: block;
@@ -31,7 +31,7 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  color: #000000;
+  color: #afafaf;
 }
 
 .select2-container .select2-selection--single .select2-selection__clear {
@@ -52,7 +52,7 @@
   min-height: 32px;
   user-select: none;
   -webkit-user-select: none;
-  color: black;
+  color: #afafaf;
 }
 
 .select2-container .select2-selection--multiple .select2-selection__rendered {
@@ -61,7 +61,7 @@
   padding-left: 8px;
   text-overflow: ellipsis;
   white-space: nowrap;
-  color: #000000;
+  color: #afafaf;
 }
 
 .select2-container .select2-search--inline {
@@ -74,7 +74,7 @@
   font-size: 100%;
   margin-top: 5px;
   padding: 0;
-  color: #000000;
+  color: #afafaf;
 }
 
 .select2-container
@@ -93,7 +93,7 @@
   left: -100000px;
   width: 100%;
   z-index: 1051;
-  color: #000000;
+  color: #afafaf;
 }
 
 .select2-results {
